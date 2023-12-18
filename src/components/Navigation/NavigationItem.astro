@@ -1,0 +1,11 @@
+---
+const { title, path } = Astro.props;
+---
+
+<li>
+  <a
+    href={path}
+    class="block px-3 py-2 text-xs font-light tracking-widest uppercase rounded md:bg-transparent md:p-0"
+    aria-current="page">{title}</a
+  >
+</li>
