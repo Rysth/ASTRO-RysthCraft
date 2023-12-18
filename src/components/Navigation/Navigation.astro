@@ -1,6 +1,6 @@
 ---
+import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
-import { Icon } from "";
 
 import BrandImage from "../../assets/images/brand.svg";
 import NavigationItem from "./NavigationItem.astro";
@@ -59,7 +59,7 @@ import NavigationItem from "./NavigationItem.astro";
     if (link.href === currentURL) {
       link.classList.add(
         "bg-indigo-700",
-        "sm:bg-transparent",
+        "md:bg-transparent",
         "md:text-indigo-500",
         "md:hover:text-white",
         "md:border-b-2",
