@@ -1,48 +1,31 @@
 ---
-import Project1 from "../assets/PNG/projects/project_1.jpg";
-import Project2 from "../assets/PNG/projects/project_2.jpg";
-import Project3 from "../assets/PNG/projects/project_3.jpg";
-import Project4 from "../assets/PNG/projects/project_4.jpg";
-import Project5 from "../assets/PNG/projects/project_5.jpg";
+import Project1 from "../../../assets/images/projects/project_1.png";
+import Project2 from "../../../assets/images/projects/project_2.png";
+import Project3 from "../../../assets/images/projects/project_3.png";
+import Card from "../../../components/ui/Card/Card.astro";
 
 const projectsData = [
   {
     id: "1",
-    title: "RysthCraft",
-    technology: "React",
-    imageSource: Project1,
-    previewLink: "https://react-rysthcraft.onrender.com/",
-    gitHublink: "https://github.com/Rysth/REACT-RysthCraft",
-  },
-  {
-    id: "2",
     title: "UpdateEC",
     technology: "React",
-    imageSource: Project2,
-    previewLink: "https://react-updateec.onrender.com/",
+    imagePreview: Project1,
+    previewLink: "https://updateec.netlify.app/",
     gitHublink: "https://github.com/Rysth/REACT-UpdateEC",
   },
   {
-    id: "3",
+    id: "2",
     title: "JP Refrigeración",
     technology: "Astro",
-    imageSource: Project3,
+    imagePreview: Project2,
     previewLink: "https://jprefrigeracion.netlify.app/",
     gitHublink: "https://github.com/Rysth/ASTRO-JPRefrigeracion",
   },
   {
-    id: "4",
-    title: "MerkautoEC",
-    technology: "React",
-    imageSource: Project4,
-    previewLink: "https://react-merkautoec.onrender.com/",
-    gitHublink: "https://github.com/Rysth/REACT-MerkautoEC",
-  },
-  {
-    id: "5",
+    id: "3",
     title: "SmartCommerce",
     technology: "React",
-    imageSource: Project5,
+    imagePreview: Project3,
     previewLink: "https://react-smartcommerce.onrender.com/",
     gitHublink: "https://github.com/Rysth/REACT-eCommerce",
   },
@@ -67,10 +50,9 @@ const projectsData = [
         .slice(0, 4)
         .map((project) => (
           <Card
-            key={project.id}
             title={project.title}
             technology={project.technology}
-            imageSource={project.imageSource}
+            imagePreview={project.imagePreview}
             previewLink={project.previewLink}
             gitHubLink={project.gitHublink}
           />

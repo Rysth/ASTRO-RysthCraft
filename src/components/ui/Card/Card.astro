@@ -1,56 +1,55 @@
 ---
+import { Image } from "astro:assets";
+import { FaStar, FaGithub } from "react-icons/fa";
+import Link from "../Link/Link.astro";
+
 interface Props {
-  imageSource: string;
+  imagePreview: string;
   title: string;
   technology: string;
   previewLink: string;
   gitHubLink: string;
 }
 
-const { imageSource, title, technology, previewLink, gitHubLink } = Astro.props;
+const { imagePreview, title, technology, previewLink, gitHubLink } =
+  Astro.props;
 ---
 
-<div class="w-full slide-in-blurred-bottom tracking-in-expand">
+<article>
   <a href={previewLink} target="_blank" rel="noopener noreferrer">
-    <img
-      class="object-cover object-center transition-transform rounded-xl md:hover:-translate-y-3"
-      src={imageSource}
+    <Image
+      src={imagePreview}
       alt={title}
+      class="object-cover object-center transition-transform rounded-xl md:hover:-translate-y-3"
     />
   </a>
-  <div class="flex justify-between my-3 md:text-base">
+  <header class="flex items-center justify-between mt-3">
     <p class="font-bold truncate max-w-[12rem]">{title}</p>
     <p class="font-bold uppercase">{technology}</p>
-  </div>
+  </header>
   <hr class="my-2 h-[1px] border-none bg-gray-500" />
   <ul class="grid gap-2 py-2">
     <li class="flex items-center justify-between text-xs">
-      <p>
-        <i class="w-3 mr-2 fa-solid fa-star"></i>
-         Live
+      <p class="flex items-center gap-2">
+        <FaStar className="text-sm" />
+         Preview
       </p>
-      <a
-        href={previewLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="border btn btn-primary btn-badge"
-      >
-        Watch
-      </a>
+      <Link
+        text="Watch"
+        route={previewLink}
+        classVariant="p-2 rounded-lg px-4 btn-gradient border"
+      />
     </li>
     <li class="flex items-center justify-between text-xs">
-      <p>
-        <i class="w-3 mr-2 fa-brands fa-github"></i>
+      <p class="flex items-center gap-2">
+        <FaGithub className="text-sm" />
          GitHub
       </p>
-      <a
-        href={gitHubLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="border btn btn-badge"
-      >
-        Watch
-      </a>
+      <Link
+        text="Watch"
+        route={gitHubLink}
+        classVariant="p-2 rounded-lg px-4 btn-secondary"
+      />
     </li>
   </ul>
-</div>
+</article>
