@@ -1,18 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import BrandImage from "../../assets/images/brand.svg";
-import NavigationItem from "./NavigationItem.astro";
 import Button from "../ui/Button/Button.astro";
+import NavigationItem from "./NavigationItem.astro";
 ---
 
 <nav class="fixed top-0 z-20 w-full start-0">
   <div
     class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto sm:py-5"
   >
-    <a
-      href="https://flowbite.com/"
-      class="flex items-center space-x-3 rtl:space-x-reverse"
-    >
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <Image
         src={BrandImage}
         alt="RysthCraft's Brand Image."
