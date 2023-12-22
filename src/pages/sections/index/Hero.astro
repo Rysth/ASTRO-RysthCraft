@@ -1,43 +1,45 @@
 ---
-
+import { Image } from "astro:assets";
+import HeroImage from "../../../assets/images/hero.png";
 ---
 
 <section class="h-screen">
   <article
-    class="grid h-full max-w-screen-xl gap-5 p-4 mx-auto py-28 sm:grid-cols-2 sm:py-40"
+    class="grid max-w-screen-xl gap-5 p-4 mx-auto py-28 sm:grid-cols-2 sm:py-40"
   >
     <header
-      class="flex flex-col justify-center gap-5 text-center text-white sm:gap-10 sm:text-left"
+      class="flex flex-col justify-center gap-5 text-center text-white sm:gap-7 sm:text-left"
     >
-      <h1 class="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-6xl">
-        Discover, collect, and charity in extraordinary NFT marketplace
+      <h1
+        class="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl"
+      >
+        Designing Professional Websites
       </h1>
-      <p class="text-sm sm:text-xl">
-        In aenean posuere lorem risus nec. Tempor tincidunt aenean purus purus
-        vestibulum nibh mi venenatis
+      <p class="text-sm text-gray-300 sm:text-lg">
+        Welcome to RysthCraft's Portfolio. I'm John Palacios, a Software
+        Developer, weaving digital sites with React, TailwindCSS and Ruby on
+        Rails.
       </p>
       <div class="flex items-center justify-center gap-3 sm:justify-start">
-        <button
-          class="p-4 px-6 text-xs sm:w-40 rounded-xl sm:text-base bg-gradient-to-br from-[#9B51E0] to-[#3081ED]"
+        <a
+          href="https://github.com/Rysth"
+          class="block p-4 px-6 text-xs text-center rounded-lg sm:w-40 sm:text-base bg-gradient-to-tl from-cyan-500 to-purple-500"
         >
-          GitHub</button
+          GitHub</a
         >
-        <button
-          class="p-4 px-6 text-xs sm:w-40 rounded-xl sm:text-base outline outline-1"
+        <a
+          href="#"
+          class="p-4 px-6 text-xs text-center rounded-lg sm:w-40 sm:text-base outline outline-1 md:hover:bg-white md:hover:text-gray-900"
         >
-          LinkedIn</button
+          LinkedIn</a
         >
       </div>
     </header>
     <main class="">
       <picture
-        class="block max-w-[350px] sm:max-w-[500px] p-4 sm:p-6 border mx-auto sm:ml-auto sm:mr-0 rounded-3xl"
+        class="block max-w-[350px] sm:max-w-[500px] p-4 sm:p-6 border mx-auto sm:ml-auto sm:mr-0 rounded-3xl border-t-violet-500 border-l-violet-500 border-r-cyan-500 border-b-cyan-500"
       >
-        <img
-          src="https://placehold.co/450x450"
-          alt=""
-          class="w-full rounded-3xl"
-        />
+        <Image src={HeroImage} alt="" class="w-full rounded-3xl" />
       </picture>
     </main>
   </article>
