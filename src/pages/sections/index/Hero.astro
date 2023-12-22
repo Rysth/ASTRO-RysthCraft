@@ -6,7 +6,7 @@ import HeroImage from "../../../assets/images/hero.png";
 
 <section class="h-screen animate__animated animate__fadeIn animate__delay-1s">
   <article
-    class="grid max-w-screen-xl gap-5 p-4 mx-auto py-28 md:grid-cols-2 md:py-40"
+    class="grid max-w-screen-xl gap-10 p-4 mx-auto py-28 md:grid-cols-2 md:py-40"
   >
     <header
       class="flex flex-col justify-center gap-5 text-center text-white sm:gap-7 md:text-left"
@@ -36,9 +36,15 @@ import HeroImage from "../../../assets/images/hero.png";
       class="animate__animated animate__pulse animate__infinite animate__slower"
     >
       <picture
-        class="block max-w-[300px] sm:max-w-[500px] p-4 sm:p-6 border mx-auto md:ml-auto md:mr-0 rounded-3xl border-t-violet-500 border-l-violet-500 border-r-cyan-500 border-b-cyan-500"
+        class="block max-w-[300px] sm:max-w-[350px] md:max-w-[500px] p-4 sm:p-6 border-2 mx-auto md:ml-auto md:mr-0 rounded-3xl border-t-violet-500 border-l-violet-500 border-r-cyan-500 border-b-cyan-400 relative backdrop-blur-3xl"
       >
+        <span
+          class="absolute w-32 h-32 rounded-full md:w-40 md:h-40 -inset-10 bg-violet-500/40 blur-3xl -z-10"
+        ></span>
         <Image src={HeroImage} alt="" class="w-full rounded-3xl" />
+        <span
+          class="absolute w-32 h-32 rounded-full inset-48 md:inset-2/3 lg:inset-96 md:w-40 md:h-40 bg-cyan-400/40 blur-3xl -z-10"
+        ></span>
       </picture>
     </main>
   </article>
