@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import BrandImage from "../../assets/images/brand.svg";
+import Button from "../ui/Button/Button.astro";
+import NavigationItem from "./NavigationItem.astro";
+---
+
+<nav
+  class="fixed top-0 z-20 w-full start-0 animate__animated animate__fadeInDown backdrop-blur-lg"
+>
+  <div
+    class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto sm:py-5"
+  >
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <Image
+        src={BrandImage}
+        alt="RysthCraft's Brand Image."
+        class="w-24 sm:w-32"
+      />
+    </a>
+    <div
+      class="flex items-center space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse"
+    >
+      <Button text="Contact" classVariant="btn-secondary" />
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+      >
+        <NavigationItem text="Home" route="/" />
+        <NavigationItem text="About" route="/about" />
+        <NavigationItem text="Services" route="/services" />
+        <NavigationItem text="Projects" route="/projects" />
+      </ul>
+    </div>
+  </div>
+</nav>

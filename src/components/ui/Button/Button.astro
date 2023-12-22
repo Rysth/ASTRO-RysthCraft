@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string;
+  classVariant: string;
+}
+
+const { text, classVariant } = Astro.props;
+---
+
+<button type="button" class={`btn  ${classVariant} uppercase !text-xs`}
+  >{text}</button
+>
