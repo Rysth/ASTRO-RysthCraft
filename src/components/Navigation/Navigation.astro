@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import BrandImage from "../../assets/images/brand.svg";
 import NavigationItem from "./NavigationItem.astro";
+import Button from "../ui/Button/Button.astro";
 ---
 
 <nav class="fixed top-0 z-20 w-full start-0">
@@ -21,11 +22,7 @@ import NavigationItem from "./NavigationItem.astro";
     <div
       class="flex items-center space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse"
     >
-      <button
-        type="button"
-        class="px-4 py-2 text-xs tracking-widest text-center text-white uppercase transition border rounded-lg sm:px-6 sm:py-4 hover:bg-white hover:text-gray-900"
-        >Contact</button
-      >
+      <Button text="Contact" classVariant="btn-secondary" />
       <button
         data-collapse-toggle="navbar-sticky"
         type="button"
