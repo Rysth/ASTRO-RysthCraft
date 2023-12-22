@@ -4,12 +4,12 @@ import BrandLogo from "../../assets/images/brand.svg";
 import Link from "../ui/Link/Link";
 ---
 
-<div
-  class="flex flex-col items-center max-w-screen-xl px-4 py-8 mx-auto lg:pt-24 sm:flex-row"
+<footer
+  class="flex flex-col items-center max-w-screen-xl px-4 py-8 mx-auto lg:pt-24 sm:flex-row animate__animated animate__fadeIn animate__delay-1s"
 >
   <div class="w-full text-white">
     <div class="grid lg:grid-cols-[1fr_60%] gap-10">
-      <Link route="/" classVariant="">
+      <Link route="/" classVariant="" target="">
         <Image
           src={BrandLogo}
           class="w-48 mx-auto lg:mx-0 sm:w-72 lg:w-96"
@@ -22,16 +22,16 @@ import Link from "../ui/Link/Link";
         <ul class="flex flex-col gap-3 p-0 lg:gap-6">
           <li class="mb-2 text-lg font-bold md:text-2xl">RysthCraft</li>
           <li class="text-sm tracking-wider text-gray-300">
-            <Link route="/" classVariant="">Home</Link>
+            <Link route="/" classVariant="" target="">Home</Link>
           </li>
         </ul>
         <ul class="flex flex-col gap-3 p-0 lg:gap-6">
           <li class="mb-2 text-lg font-bold md:text-2xl">QuickAccess</li>
           <li class="text-sm tracking-wider text-gray-300">
-            <Link route="/about" classVariant="">About</Link>
+            <Link route="/about" classVariant="" target="">About</Link>
           </li>
           <li class="text-sm tracking-wider text-gray-300">
-            <Link route="/projects" classVariant="">Projects</Link>
+            <Link route="/projects" classVariant="" target="">Projects</Link>
           </li>
         </ul>
         <ul class="flex flex-col gap-3 p-0 lg:gap-6">
@@ -94,4 +94,4 @@ import Link from "../ui/Link/Link";
       <p class="text-sm">Copyright RysthCraft | 2023</p>
     </div>
   </div>
-</div>
+</footer>
