@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import { FaStar, FaGithub } from "react-icons/fa";
-import Link from "../Link/Link.astro";
+import { FaBars, FaGithub, FaStar } from "react-icons/fa";
+import Link from "../Link/Link.jsx";
 
 interface Props {
   imagePreview: string;
@@ -35,21 +35,20 @@ const { imagePreview, title, technology, previewLink, gitHubLink } =
          Preview
       </p>
       <Link
-        text="Watch"
         route={previewLink}
         classVariant="p-2 rounded-lg px-4 btn-gradient border"
-      />
+      >
+        Watch
+      </Link>
     </li>
     <li class="flex items-center justify-between text-xs">
       <p class="flex items-center gap-2">
         <FaGithub className="text-sm" />
          GitHub
       </p>
-      <Link
-        text="Watch"
-        route={gitHubLink}
-        classVariant="p-2 rounded-lg px-4 btn-secondary"
-      />
+      <Link route={gitHubLink} classVariant="p-2 rounded-lg px-4 btn-secondary">
+        Watch
+      </Link>
     </li>
   </ul>
 </article>

@@ -3,6 +3,8 @@ import Project1 from "../../../assets/images/projects/project_1.png";
 import Project2 from "../../../assets/images/projects/project_2.png";
 import Project3 from "../../../assets/images/projects/project_3.png";
 import Card from "../../../components/ui/Card/Card.astro";
+import Link from "../../../components/ui/Link/Link.jsx";
+import { FaArrowRight, FaBars } from "react-icons/fa";
 
 const projectsData = [
   {
@@ -35,15 +37,17 @@ const projectsData = [
 <section
   class="container max-w-screen-xl p-4 py-16 mx-auto text-white lg:py-28"
 >
-  <div class="flex items-center justify-between mb-10">
-    <header>
-      <h2
-        class="text-xl font-bold text-center md:text-3xl lg:text-3xl md:text-left tracking-in-expand"
-      >
-        Featured Projects
-      </h2>
-    </header>
-  </div>
+  <header class="flex items-center justify-between mb-10">
+    <h2
+      class="text-xl font-bold text-center md:text-3xl lg:text-3xl md:text-left tracking-in-expand"
+    >
+      Featured Projects
+    </h2>
+    <Link route="/projects" classVariant="text-sm" target="">
+      See All
+      <FaArrowRight />
+    </Link>
+  </header>
   <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8 lg:gap-10">
     {
       projectsData
