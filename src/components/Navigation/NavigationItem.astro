@@ -1,0 +1,32 @@
+---
+interface Props {
+  text: string;
+  route: string;
+}
+
+const { text, route } = Astro.props;
+---
+
+<li>
+  <a
+    href={route}
+    class="block px-3 py-2 text-xs tracking-widest text-white uppercase rounded shadow md:p-0 md:hover:text-cyan-300 drop-shadow nav-item"
+    aria-current="page">{text}</a
+  >
+</li>
+
+<script>
+  const currentPath = window.location.href;
+  const currentItems = document.querySelectorAll(".nav-item");
+
+  currentItems.forEach((item: HTMLAnchorElement) => {
+    if (item.href === currentPath) {
+      item.classList.add(
+        "sm:text-cyan-300",
+        "bg-blue-600",
+        "text-white",
+        "sm:bg-transparent",
+      );
+    }
+  });
+</script>
