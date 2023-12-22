@@ -4,24 +4,22 @@ import Link from "../../../components/ui/Link/Link.astro";
 import HeroImage from "../../../assets/images/hero.png";
 ---
 
-<section class="h-screen">
+<section class="h-screen animate__animated animate__fadeIn animate__delay-1s">
   <article
-    class="grid max-w-screen-xl gap-5 p-4 mx-auto py-28 sm:grid-cols-2 sm:py-40"
+    class="grid max-w-screen-xl gap-5 p-4 mx-auto py-28 md:grid-cols-2 md:py-40"
   >
     <header
-      class="flex flex-col justify-center gap-5 text-center text-white sm:gap-7 sm:text-left"
+      class="flex flex-col justify-center gap-5 text-center text-white sm:gap-7 md:text-left"
     >
-      <h1
-        class="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl"
-      >
+      <h1 class="text-2xl font-bold sm:text-5xl md:text-6xl xl:text-8xl">
         Designing Professional Websites
       </h1>
-      <p class="text-sm text-gray-300 sm:text-lg">
+      <p class="text-sm text-gray-300 sm:text-base md:text-lg">
         Welcome to RysthCraft's Portfolio. I'm John Palacios, a Software
         Developer, weaving digital sites with React, TailwindCSS and Ruby on
         Rails.
       </p>
-      <div class="flex items-center justify-center gap-3 sm:justify-start">
+      <div class="flex items-center justify-center gap-3 md:justify-start">
         <Link
           text="GitHub"
           route="https://github.com/Rysth"
@@ -34,9 +32,11 @@ import HeroImage from "../../../assets/images/hero.png";
         />
       </div>
     </header>
-    <main class="">
+    <main
+      class="animate__animated animate__pulse animate__infinite animate__slower"
+    >
       <picture
-        class="block max-w-[350px] sm:max-w-[500px] p-4 sm:p-6 border mx-auto sm:ml-auto sm:mr-0 rounded-3xl border-t-violet-500 border-l-violet-500 border-r-cyan-500 border-b-cyan-500"
+        class="block max-w-[300px] sm:max-w-[500px] p-4 sm:p-6 border mx-auto md:ml-auto md:mr-0 rounded-3xl border-t-violet-500 border-l-violet-500 border-r-cyan-500 border-b-cyan-500"
       >
         <Image src={HeroImage} alt="" class="w-full rounded-3xl" />
       </picture>
