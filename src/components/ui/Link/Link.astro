@@ -1,0 +1,25 @@
+---
+interface Props {
+  text: string;
+  route: string;
+  className: string;
+}
+
+const { text, route, className } = Astro.props;
+---
+
+<a href={route} class={`btn ${className}`}> {text}</a>
+
+<style>
+  .btn {
+    @apply block p-4 px-6 text-xs text-center rounded-lg sm:w-40 sm:text-base;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-tl from-cyan-500 to-purple-500;
+  }
+
+  .btn-secondary {
+    @apply outline outline-1 md:hover:bg-white md:hover:text-gray-900;
+  }
+</style>

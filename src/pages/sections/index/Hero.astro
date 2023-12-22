@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Link from "../../../components/ui/Link/Link.astro";
 import HeroImage from "../../../assets/images/hero.png";
 ---
 
@@ -21,18 +22,16 @@ import HeroImage from "../../../assets/images/hero.png";
         Rails.
       </p>
       <div class="flex items-center justify-center gap-3 sm:justify-start">
-        <a
-          href="https://github.com/Rysth"
-          class="block p-4 px-6 text-xs text-center rounded-lg sm:w-40 sm:text-base bg-gradient-to-tl from-cyan-500 to-purple-500"
-        >
-          GitHub</a
-        >
-        <a
-          href="#"
-          class="p-4 px-6 text-xs text-center rounded-lg sm:w-40 sm:text-base outline outline-1 md:hover:bg-white md:hover:text-gray-900"
-        >
-          LinkedIn</a
-        >
+        <Link
+          text="GitHub"
+          route="https://github.com/Rysth"
+          className="btn-gradient"
+        />
+        <Link
+          text="LinkedIn"
+          route="https://www.linkedin.com/in/john-palacios-rysthcraft/"
+          className="btn-secondary"
+        />
       </div>
     </header>
     <main class="">
