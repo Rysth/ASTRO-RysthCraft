@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import Link from "../../../components/ui/Link/Link.astro";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import HeroImage from "../../../assets/images/hero.png";
+import Link from "../../../components/ui/Link/Link.jsx";
 ---
 
-<section class="h-screen animate__animated animate__fadeIn animate__delay-1s">
+<section class="animate__animated animate__fadeIn animate__delay-1s">
   <article
-    class="grid max-w-screen-xl gap-10 p-4 mx-auto py-28 md:grid-cols-2 md:py-40"
+    class="grid max-w-screen-xl gap-10 p-4 mx-auto py-28 md:grid-cols-2 md:py-40 md:pb-28"
   >
     <header
       class="flex flex-col justify-center gap-5 text-center text-white sm:gap-7 md:text-left"
@@ -16,20 +17,21 @@ import HeroImage from "../../../assets/images/hero.png";
       </h1>
       <p class="text-sm text-gray-300 sm:text-base md:text-lg">
         Welcome to RysthCraft's Portfolio. I'm John Palacios, a Software
-        Developer, weaving digital sites with React, TailwindCSS and Ruby on
-        Rails.
+        Developer, weaving digital sites with React, Astro, and Ruby on Rails.
       </p>
       <div class="flex items-center justify-center gap-3 md:justify-start">
+        <Link route="https://github.com/Rysth" classVariant="btn btn-gradient">
+          <FaGithub />
+           GitHub
+        </Link>
+
         <Link
-          text="GitHub"
-          route="https://github.com/Rysth"
-          classVariant="btn btn-gradient"
-        />
-        <Link
-          text="LinkedIn"
           route="https://www.linkedin.com/in/john-palacios-rysthcraft/"
           classVariant="btn btn-secondary"
-        />
+        >
+          <FaLinkedin />
+           LinkedIn
+        </Link>
       </div>
     </header>
     <main
@@ -43,7 +45,7 @@ import HeroImage from "../../../assets/images/hero.png";
         ></span>
         <Image src={HeroImage} alt="" class="w-full rounded-3xl" />
         <span
-          class="absolute w-32 h-32 rounded-full inset-48 md:inset-2/3 lg:inset-96 md:w-40 md:h-40 bg-cyan-400/40 blur-3xl -z-10"
+          class="absolute w-32 h-32 rounded-full inset-48 md:inset-2/4 lg:inset-96 md:w-40 md:h-40 bg-cyan-400/40 blur-3xl -z-10"
         ></span>
       </picture>
     </main>

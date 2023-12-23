@@ -1,40 +1,16 @@
 ---
 import Navigation from "../components/Navigation/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
-import Hero from "./sections/index/Hero.astro";
+import HeroSection from "./sections/index/HeroSection.astro";
+import FeatureSection from "./sections/index/FeatureSection.astro";
+import ContactSection from "./sections/index/ContactSection.astro";
+import Footer from "../components/Footer/Footer.astro";
 ---
 
 <Layout title="RysthCraft | Software Developer | Professional Websites">
   <Navigation />
-  <Hero />
+  <HeroSection />
+  <FeatureSection />
+  <ContactSection />
+  <Footer />
 </Layout>
-<style is:global>
-  @import url("https://fonts.cdnfonts.com/css/poppins");
-
-  :root {
-    --CL-neutral-black: #1f1d2b;
-    --CL-primary-blue: #2e3191;
-  }
-
-  body {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--CL-neutral-black);
-  }
-
-  button,
-  a {
-    @apply md:hover:scale-105 md:active:scale-95 md:transition;
-  }
-
-  .btn {
-    @apply border p-4 px-6 text-xs text-center rounded-lg sm:w-32 sm:text-sm;
-  }
-
-  .btn-gradient {
-    @apply border-gray-900 bg-gradient-to-tl from-cyan-500 to-purple-500;
-  }
-
-  .btn-secondary {
-    @apply border md:hover:bg-white md:hover:text-gray-900 text-white;
-  }
-</style>

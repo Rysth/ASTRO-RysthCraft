@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import { FaGithub, FaStar } from "react-icons/fa";
+import Link from "../Link/Link.jsx";
+
+interface Props {
+  previewImage: string;
+  title: string;
+  technology: string;
+  previewLink: string;
+  gitHubLink: string;
+}
+
+const { previewImage, title, technology, previewLink, gitHubLink } =
+  Astro.props;
+---
+
+<article class="animate__animated animate__fadeInUp animate__delay-1s">
+  <a href={previewLink} target="_blank" rel="noopener noreferrer">
+    <Image
+      src={previewImage}
+      alt={title}
+      class="object-cover object-center transition-transform rounded-xl md:hover:-translate-y-3"
+    />
+  </a>
+  <header class="flex items-center justify-between mt-3">
+    <p class="font-bold truncate max-w-[12rem]">{title}</p>
+    <p class="font-bold uppercase">{technology}</p>
+  </header>
+  <hr class="my-2 h-[1px] border-none bg-gray-500" />
+  <ul class="grid gap-2 py-2">
+    <li class="flex items-center justify-between text-xs">
+      <p class="flex items-center gap-2">
+        <FaStar className="text-sm" />
+         Preview
+      </p>
+      <Link
+        route={previewLink}
+        classVariant="p-2 rounded-lg px-4 btn-gradient border"
+      >
+        Watch
+      </Link>
+    </li>
+    <li class="flex items-center justify-between text-xs">
+      <p class="flex items-center gap-2">
+        <FaGithub className="text-sm" />
+         GitHub
+      </p>
+      <Link route={gitHubLink} classVariant="p-2 rounded-lg px-4 btn-secondary">
+        Watch
+      </Link>
+    </li>
+  </ul>
+</article>

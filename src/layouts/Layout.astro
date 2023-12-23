@@ -16,7 +16,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="h-full">
+  <body>
     <slot />
     <script
       is:inline
@@ -24,3 +24,38 @@ const { title } = Astro.props;
     ></script>
   </body>
 </html>
+
+<style is:global>
+  @import url("https://fonts.cdnfonts.com/css/poppins");
+
+  :root {
+    --CL-neutral-black: #1f1d2b;
+    --CL-primary-blue: #2e3191;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--CL-neutral-black);
+  }
+
+  button,
+  a {
+    @apply md:hover:scale-105 md:active:scale-95 md:transition;
+  }
+
+  .btn {
+    @apply border p-4 px-6 text-xs text-center rounded-lg sm:w-32 sm:text-sm;
+  }
+
+  .btn-gradient {
+    @apply border-[var(--CL-neutral-black)] bg-gradient-to-br from-violet-600 to-cyan-500;
+  }
+
+  .btn-primary {
+    @apply border-transparent bg-[var(--CL-primary-blue)] text-white;
+  }
+
+  .btn-secondary {
+    @apply border md:hover:bg-white md:hover:text-[var(--CL-neutral-black)] text-white;
+  }
+</style>
