@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import * as ReactIcons from "react-icons/fa/index.js";
 import BrandLogo from "../../assets/images/brand.svg";
 import Link from "../ui/Link/Link";
+const { FaInstagram, FaLinkedin, FaGithub } = ReactIcons;
 ---
 
 <footer

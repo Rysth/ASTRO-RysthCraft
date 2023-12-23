@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import * as ReactIcons from "react-icons/fa/index.js";
 import HeroImage from "../../../assets/images/hero.png";
 import Link from "../../../components/ui/Link/Link.jsx";
+const { FaGithub, FaLinkedin } = ReactIcons;
 ---
 
 <section class="animate__animated animate__fadeIn animate__delay-1s">

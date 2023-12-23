@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import { FaBars } from "react-icons/fa";
+import * as ReactIcons from "react-icons/fa/index.js";
 import BrandImage from "../../assets/images/brand.svg";
-import NavigationItem from "./NavigationItem.astro";
 import Link from "../ui/Link/Link";
+import NavigationItem from "./NavigationItem.astro";
+const { FaBars } = ReactIcons;
 ---
 
 <nav

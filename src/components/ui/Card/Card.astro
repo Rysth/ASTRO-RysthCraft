@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import { FaGithub, FaStar } from "react-icons/fa";
+import * as ReactIcons from "react-icons/fa/index.js";
+const { FaGithub, FaStar } = ReactIcons;
+
 import Link from "../Link/Link.jsx";
 
 interface Props {
