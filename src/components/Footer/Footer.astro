@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import BrandLogo from "../../assets/images/brand.svg";
 import Link from "../ui/Link/Link";
 ---
@@ -57,37 +58,34 @@ import Link from "../ui/Link/Link";
     </div>
     <hr class="h-0.5 my-10 border-0 outline-none bg-gray-400" />
     <div
-      class="flex flex-col items-center justify-between gap-3 text-gray-400 sm:flex-row"
+      class="flex flex-col items-center justify-between gap-3 text-gray-300 sm:flex-row"
     >
-      <ul class="flex justify-center gap-5 md:justify-start">
-        <li class="transition-transform lg:hover:scale-110">
+      <ul class="flex items-center justify-center gap-5 md:justify-start">
+        <li class="transition-transform md:hover:scale-105">
           <a
             href="https://www.instagram.com/rysthcraft/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="hidden">Instagram</span>
-            <i class="text-2xl fa-brands fa-instagram"></i>
+            <FaInstagram className="text-2xl inline-block" />
           </a>
         </li>
-        <li class="transition-transform lg:hover:scale-110">
+        <li class="transition-transform md:hover:scale-105">
           <a
             href="https://www.linkedin.com/in/john-palacios-rysthcraft/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="hidden">LinkedIN</span>
-            <i class="text-2xl fa-brands fa-linkedin"></i>
+            <FaLinkedin className="text-2xl inline-block" />
           </a>
         </li>
-        <li class="transition-transform lg:hover:scale-110">
+        <li class="transition-transform md:hover:scale-105">
           <a
             href="https://github.com/Rysth"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="hidden">GitHub</span>
-            <i class="text-2xl fa-brands fa-github"></i>
+            <FaGithub className="text-2xl inline-block" />
           </a>
         </li>
       </ul>
