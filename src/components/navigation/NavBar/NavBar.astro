@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import * as ReactIcons from "react-icons/fa/index.js";
-import BrandImage from "../../assets/images/brand/brand.svg";
-import Link from "../ui/Link/Link";
-import NavigationItem from "./NavigationItem.astro";
+import BrandImage from "../../../assets/images/brand/brand.svg";
+import Link from "../../ui/Link/Link";
+import NavBarItem from "./NavBarItem.astro";
 const { FaBars } = ReactIcons;
 ---
 
@@ -47,10 +47,10 @@ const { FaBars } = ReactIcons;
       <ul
         class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
       >
-        <NavigationItem text="Home" route="/" />
-        <NavigationItem text="About" route="/about" />
-        <NavigationItem text="Services" route="/services" />
-        <NavigationItem text="Projects" route="/projects" />
+        <NavBarItem text="Home" route="/" />
+        <NavBarItem text="About" route="/about" />
+        <NavBarItem text="Services" route="/services" />
+        <NavBarItem text="Projects" route="/projects" />
       </ul>
     </div>
   </div>
