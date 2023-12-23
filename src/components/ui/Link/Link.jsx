@@ -9,7 +9,7 @@ function Link({
       href={route}
       target={target}
       rel="noopener noreferrer"
-      class={`flex items-center justify-center gap-2  ${classVariant}`}
+      className={`flex items-center justify-center gap-2  ${classVariant}`}
     >
       {children}
     </a>

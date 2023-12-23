@@ -1,24 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import { FaBars, FaGithub, FaStar } from "react-icons/fa";
+import { FaGithub, FaStar } from "react-icons/fa";
 import Link from "../Link/Link.jsx";
 
 interface Props {
-  imagePreview: string;
+  previewImage: string;
   title: string;
   technology: string;
   previewLink: string;
   gitHubLink: string;
 }
 
-const { imagePreview, title, technology, previewLink, gitHubLink } =
+const { previewImage, title, technology, previewLink, gitHubLink } =
   Astro.props;
 ---
 
 <article class="animate__animated animate__fadeInUp animate__delay-1s">
   <a href={previewLink} target="_blank" rel="noopener noreferrer">
     <Image
-      src={imagePreview}
+      src={previewImage}
       alt={title}
       class="object-cover object-center transition-transform rounded-xl md:hover:-translate-y-3"
     />
