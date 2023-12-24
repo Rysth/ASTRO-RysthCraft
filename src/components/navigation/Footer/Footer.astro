@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import * as ReactIcons from "react-icons/fa/index.js";
-import BrandLogo from "../../assets/images/brand.svg";
-import Link from "../ui/Link/Link";
+import BrandLogo from "../../../assets/images/brand/brand.svg";
+import Link from "../../ui/Link/Link.astro";
 const { FaInstagram, FaLinkedin, FaGithub } = ReactIcons;
 ---
 
@@ -15,7 +15,7 @@ const { FaInstagram, FaLinkedin, FaGithub } = ReactIcons;
         <Image
           src={BrandLogo}
           class="w-48 mx-auto lg:mx-0 sm:w-72 lg:w-96"
-          alt="RysthCraft brand"
+          alt="RysthCraft brand image"
         />
       </Link>
       <div
@@ -40,6 +40,7 @@ const { FaInstagram, FaLinkedin, FaGithub } = ReactIcons;
           <li class="mb-2 text-lg font-bold md:text-2xl">Contacts</li>
           <li class="text-sm tracking-wider text-gray-300">
             <Link
+              target="_blank"
               route="https://www.linkedin.com/in/john-palacios-rysthcraft/"
               classVariant=" !text-left"
             >
@@ -47,10 +48,20 @@ const { FaInstagram, FaLinkedin, FaGithub } = ReactIcons;
             </Link>
           </li>
           <li class="text-sm tracking-wider text-gray-300">
-            <Link route="https://github.com/Rysth" classVariant="">GitHub</Link>
+            <Link
+              target="_blank"
+              route="https://github.com/Rysth"
+              classVariant=""
+            >
+              GitHub
+            </Link>
           </li>
           <li class="text-sm tracking-wider text-gray-300">
-            <Link route="mailto:johnpalacios.t@gmail.com" classVariant="">
+            <Link
+              target="_blank"
+              route="mailto:johnpalacios.t@gmail.com"
+              classVariant=""
+            >
               Gmail
             </Link>
           </li>

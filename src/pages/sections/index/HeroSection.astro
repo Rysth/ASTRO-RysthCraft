@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import * as ReactIcons from "react-icons/fa/index.js";
-import HeroImage from "../../../assets/images/hero.png";
-import Link from "../../../components/ui/Link/Link.jsx";
+import HeroImage from "../../../assets/images/brand/hero.png";
+import Link from "../../../components/ui/Link/Link.astro";
+import Section from "../../../layouts/Section.astro";
 const { FaGithub, FaLinkedin } = ReactIcons;
 ---
 
-<section class="animate__animated animate__fadeIn animate__delay-1s">
+<Section>
   <article
     class="grid max-w-screen-xl gap-10 p-4 mx-auto py-28 md:grid-cols-2 md:py-40 md:pb-28"
   >
@@ -51,4 +52,4 @@ const { FaGithub, FaLinkedin } = ReactIcons;
       </picture>
     </main>
   </article>
-</section>
+</Section>

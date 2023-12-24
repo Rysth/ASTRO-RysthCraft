@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import * as ReactIcons from "react-icons/fa/index.js";
 const { FaGithub, FaStar } = ReactIcons;
 
-import Link from "../Link/Link.jsx";
+import Link from "../Link/Link.astro";
 
 interface Props {
   previewImage: string;
@@ -21,7 +21,7 @@ const { previewImage, title, technology, previewLink, gitHubLink } =
   <a href={previewLink} target="_blank" rel="noopener noreferrer">
     <Image
       src={previewImage}
-      alt={title}
+      alt="Preview Image"
       class="object-cover object-center transition-transform rounded-xl md:hover:-translate-y-3"
     />
   </a>
@@ -37,6 +37,7 @@ const { previewImage, title, technology, previewLink, gitHubLink } =
          Preview
       </p>
       <Link
+        target="_blank"
         route={previewLink}
         classVariant="p-2 rounded-lg px-4 btn-gradient border"
       >
@@ -48,7 +49,11 @@ const { previewImage, title, technology, previewLink, gitHubLink } =
         <FaGithub className="text-sm" />
          GitHub
       </p>
-      <Link route={gitHubLink} classVariant="p-2 rounded-lg px-4 btn-secondary">
+      <Link
+        target="_blank"
+        route={gitHubLink}
+        classVariant="p-2 rounded-lg px-4 btn-secondary"
+      >
         Watch
       </Link>
     </li>
