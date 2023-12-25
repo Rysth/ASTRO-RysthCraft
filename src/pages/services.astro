@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PricingCard from "./components/services/PricingCard.astro";
+
+const landingItems = [
+  { title: "1 Page" },
+  { title: "Free Domain Name" },
+  { title: "Free SSL Certification" },
+  { title: "Responsive Design" },
+  { title: "Professional Web Design" },
+  { title: "Contacts Form" },
+  { title: "Gallery Section" },
+];
+---
+
+<Layout title="RysthCraft | Services | Full-Stack Web Developer">
+  <section class="">
+    <div class="max-w-screen-xl px-4 mx-auto py-28 md:py-40 md:pb-24 lg:px-6">
+      <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+        <h2
+          class="mb-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl"
+        >
+          Our Services
+        </h2>
+        <p class="mb-5 text-sm font-light text-gray-300 sm:text-base">
+          Digital Brilliance Unleashed. RysthCraft crafts captivating web
+          experiences—from striking Landing Pages to intricate Small Web
+          Applications, redefining standards in digital innovation and brand
+          elevation.
+        </p>
+      </div>
+      <main
+        class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
+      >
+        <PricingCard
+          title="Landing Page"
+          subtitle="Perfect for personal business"
+          price="200"
+          hosting="Hosting $20/month"
+          items={landingItems}
+        />
+      </main>
+    </div>
+  </section>
+</Layout>
