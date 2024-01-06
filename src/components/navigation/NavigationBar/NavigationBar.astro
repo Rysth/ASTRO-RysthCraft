@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import BrandImage from "../../../assets/images/brand/brand.svg";
+import * as ReactIcons from "react-icons/hi2";
+const { HiBars3BottomRight } = ReactIcons;
+---
+
+<nav class="fixed top-0 z-50 w-full">
+  <div
+    class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto sm:py-6"
+  >
+    <a href="/" class="flex items-center space-x-3">
+      <Image src={BrandImage} class="w-28 sm:w-32" alt="Flowbite Logo" />
+    </a>
+    <div class="flex space-x-3 md:order-2 md:space-x-0">
+      <a
+        href="/contacts"
+        class="p-2 px-6 text-sm text-center text-[var(--CL-primary-blue)] duration-100 bg-white rounded-lg md:p-3 md:px-8 md:hover:bg-black md:hover:text-white md:transition"
+        >Contact</a
+      >
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center justify-center w-10 h-10 p-1 text-white rounded-lg md:hidden focus:ring-2 focus:ring-white"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <HiBars3BottomRight className="text-white text-4xl" />
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent"
+      >
+        <li>
+          <a
+            href="/"
+            class="block px-3 py-2 text-blue-800 rounded md:text-sm md:text-white hover:bg-[var(--CL-primary-blue)] hover:text-white md:hover:bg-transparent md:hover:border-b md:px-0 md:py-2 transition md:rounded-none"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/services"
+            class="block px-3 py-2 text-blue-800 rounded md:text-sm md:text-white hover:bg-[var(--CL-primary-blue)] hover:text-white md:hover:bg-transparent md:hover:border-b md:px-0 md:py-2 transition md:rounded-none"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="/portfolio"
+            class="block px-3 py-2 text-blue-800 rounded md:text-sm md:text-white hover:bg-[var(--CL-primary-blue)] hover:text-white md:hover:bg-transparent md:hover:border-b md:px-0 md:py-2 transition md:rounded-none"
+            >Portfolio</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
