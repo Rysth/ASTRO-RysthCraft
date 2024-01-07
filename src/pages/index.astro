@@ -1,10 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import HeroImage from "../assets/images/hero/hero.png";
 ---
 
 <Layout title="RysthCraft | Software Developer | Professional Websites">
-  <section class="p-4">
-    <article class="max-w-screen-xl py-24 mx-auto md:py-32 lg:py-44">
+  <section
+    class="p-4 bg-[var(--CL-primary-blue)] max-h-[34rem] sm:max-h-[39rem] md:max-h-[43rem] lg:max-h-[118vh] rounded-br-[30vw]"
+  >
+    <article class="max-w-screen-xl py-24 mx-auto space-y-10 md:py-32 lg:py-44">
       <header class="flex flex-col items-center gap-5 text-white">
         <h2
           class="inline-block max-w-screen-sm text-3xl font-bold text-center lg:max-w-screen-md sm:text-xl md:text-4xl lg:text-6xl"
@@ -13,12 +17,44 @@ import Layout from "../layouts/Layout.astro";
            Websites and Software Solutions
         </h2>
         <p
-          class="max-w-screen-sm px-8 text-sm text-center text-gray-200 md:text-base"
+          class="max-w-screen-sm text-sm text-center text-gray-200 md:px-8 md:text-base"
         >
           Welcome to RysthCraft's Website. I'm John Palacios, a Software
           Developer, weaving digital sites with React, Astro, and Ruby on Rails.
         </p>
       </header>
+      <main>
+        <div class="flex items-center justify-center gap-3">
+          <a
+            href="https://github.com/Rysth"
+            target="_blank"
+            class="py-3 px-6 w-32 text-sm text-center border border-transparent text-[var(--CL-primary-blue)] duration-100 bg-white rounded-lg md:px-8 md:hover:bg-black md:hover:text-white md:transition"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/john-palacios-rysthcraft/"
+            target="_blank"
+            class="w-32 px-6 py-3 text-sm text-center text-white duration-100 border rounded-lg md:px-8 md:hover:bg-black md:hover:border-transparent md:hover:text-white md:transition"
+            >LinkedIn</a
+          >
+        </div>
+      </main>
+      <footer class="mx-auto">
+        <Image
+          src={HeroImage}
+          alt="Hero Image"
+          class="block w-full h-full max-w-4xl mx-auto rounded-xl"
+        />
+        <main class="flex"></main>
+      </footer>
+    </article>
+  </section>
+  <section>
+    <article
+      class="max-w-screen-xl py-48 mx-auto space-y-10 md:py-60 lg:py-[30rem]"
+    >
+      Hello
     </article>
   </section>
 </Layout>
