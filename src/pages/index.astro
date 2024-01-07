@@ -7,6 +7,8 @@ import ReactImage from "../assets/images/technologies/react.svg";
 import RailsImage from "../assets/images/technologies/rails.svg";
 import HTMLImage from "../assets/images/technologies/html.svg";
 import CSSImage from "../assets/images/technologies/css.svg";
+import * as ReactIcons from "react-icons/hi2";
+const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
 ---
 
 <Layout title="RysthCraft | Software Developer | Professional Websites">
@@ -52,42 +54,103 @@ import CSSImage from "../assets/images/technologies/css.svg";
           class="block w-full h-full max-w-4xl mx-auto rounded-xl"
         />
         <main
-          class="flex flex-wrap items-center justify-center gap-5 mt-5 md:gap-20"
+          class="flex flex-wrap items-center justify-center gap-5 mt-5 md:gap-12"
         >
           <Image
             src={HTMLImage}
             alt="HTML Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-20"
+            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-16"
           />
           <Image
             src={CSSImage}
             alt="CSS Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-20"
+            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-16"
           />
           <Image
             src={AstroImage}
             alt="Astro Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-24"
+            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-20"
           />
           <Image
             src={ReactImage}
             alt="React Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-24"
+            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-20"
           />
           <Image
             src={RailsImage}
             alt="Rails Image"
-            class="w-20 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-28"
+            class="w-20 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-24"
           />
         </main>
       </footer>
     </article>
   </section>
-  <section>
+  <section class="p-4">
     <article
-      class="max-w-screen-xl pt-48 mx-auto space-y-10 md:pt-60 lg:pt-[30rem]"
+      class="max-w-screen-xl pt-72 mx-auto space-y-20 sm:pt-[28rem] lg:pt-[30rem] pb-20"
     >
-      Hello
+      <header class="mb-10 md:mb-16">
+        <h2
+          class="mb-4 text-2xl font-bold text-center text-gray-800 md:mb-6 sm:text-3xl"
+        >
+          Our Solution for Your Business
+        </h2>
+
+        <p
+          class="max-w-screen-md mx-auto text-sm text-center text-gray-500 md:text-base"
+        >
+          Our commitment lies in delivering an array of high-quality web design
+          and development services, tailored to the unique needs of our clients
+          across the United States.
+        </p>
+      </header>
+      <main
+        class="flex flex-col items-center justify-center max-w-screen-lg gap-5 mx-auto sm:flex-row"
+      >
+        <div class="flex flex-col items-center">
+          <div
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8"
+          >
+            <HiDevicePhoneMobile className="text-6xl" />
+          </div>
+          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl">
+            Mobile-First Design
+          </h3>
+          <p class="max-w-sm mb-2 text-sm text-center text-gray-500">
+            We ensure your website looks great and works flawlessly on all
+            devices, providing an optimal experience for every visitor.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8"
+          >
+            <HiShieldCheck className="text-6xl" />
+          </div>
+          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl">
+            Secure and Reliable
+          </h3>
+          <p class="max-w-sm mb-2 text-sm text-center text-gray-500">
+            Prioritizing your website's security and uptime, we implement robust
+            security measures and reliable hosting solutions.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8"
+          >
+            <HiBolt className="text-6xl" />
+          </div>
+          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl">
+            Speed Optimized
+          </h3>
+          <p class="max-w-sm mb-2 text-sm text-center text-gray-500">
+            Each site boasts hand-written code and efficient design, ensuring
+            rapid load times, improved user satisfaction, and enhanced SEO
+            rankings.
+          </p>
+        </div>
+      </main>
     </article>
   </section>
 </Layout>
