@@ -2,98 +2,18 @@
 import { Image } from "astro:assets";
 import * as FaIcons from "react-icons/fa";
 import * as HiIcons from "react-icons/hi2";
-import HeroImage from "../assets/images/hero/hero.jpg";
+import BrandImage from "../assets/images/brand/brand.svg";
 import YachtIllustration from "../assets/images/illustrations/yacht.svg";
 import UpdateProject from "../assets/images/projects/project_1.png";
 import JPProject from "../assets/images/projects/project_2.png";
-import AstroImage from "../assets/images/technologies/astro.svg";
-import CSSImage from "../assets/images/technologies/css.svg";
-import HTMLImage from "../assets/images/technologies/html.svg";
-import RailsImage from "../assets/images/technologies/rails.svg";
-import ReactImage from "../assets/images/technologies/react.svg";
 import Layout from "../layouts/Layout.astro";
-import BrandImage from "../assets/images/brand/brand.svg";
 const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = HiIcons;
-const { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaGoogle } = FaIcons;
+const { FaGithub, FaWhatsapp, FaInstagram, FaGoogle } = FaIcons;
+import HeroIndex from "./sections/index/hero_index.astro";
 ---
 
 <Layout title="RysthCraft | Software Developer | Professional Websites">
-  <section
-    class="p-4 bg-[var(--CL-primary-blue)] max-h-[34rem] sm:max-h-[39rem] md:max-h-[43rem] lg:max-h-[118vh] rounded-br-[30vw]"
-  >
-    <article class="max-w-screen-xl py-24 mx-auto space-y-10 md:py-32 lg:py-44">
-      <header class="flex flex-col items-center gap-5 text-white">
-        <h2
-          class="inline-block max-w-screen-sm text-3xl font-bold text-center lg:max-w-screen-md sm:text-xl md:text-4xl lg:text-6xl"
-        >
-          Building <span class="mb-1 text-cyan-300">Amazing</span>
-           Websites and Software Solutions
-        </h2>
-        <p
-          class="max-w-screen-sm text-sm text-center text-gray-200 md:px-8 md:text-base"
-        >
-          Welcome to RysthCraft's Website. I'm John Palacios, a Software
-          Developer, weaving digital sites with React, Astro, and Ruby on Rails.
-        </p>
-      </header>
-      <main>
-        <div class="flex items-center justify-center gap-3">
-          <a
-            href="https://github.com/Rysth"
-            target="_blank"
-            class="py-3 px-6 w-36 text-sm justify-center border border-transparent text-[var(--CL-primary-blue)] duration-100 bg-white rounded-lg md:px-8 md:hover:bg-black md:hover:text-white md:transition flex items-center gap-1"
-          >
-            <FaGithub className="text-xl" />
-             GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/john-palacios-rysthcraft/"
-            target="_blank"
-            class="flex items-center justify-center gap-1 px-6 py-3 text-sm text-white duration-100 border rounded-lg w-36 md:px-8 md:hover:bg-black md:hover:border-transparent md:hover:text-white md:transition"
-          >
-            <FaLinkedin className="text-xl" />
-             LinkedIn</a
-          >
-        </div>
-      </main>
-      <footer class="mx-auto">
-        <Image
-          src={HeroImage}
-          alt="Hero Image"
-          class="block w-full h-full max-w-4xl mx-auto shadow-xl rounded-xl"
-        />
-        <main
-          class="flex flex-wrap items-center justify-center gap-5 mt-5 md:gap-16"
-        >
-          <Image
-            src={HTMLImage}
-            alt="HTML Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-16"
-          />
-          <Image
-            src={CSSImage}
-            alt="CSS Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-16"
-          />
-          <Image
-            src={AstroImage}
-            alt="Astro Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-20"
-          />
-          <Image
-            src={ReactImage}
-            alt="React Image"
-            class="w-8 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-20"
-          />
-          <Image
-            src={RailsImage}
-            alt="Rails Image"
-            class="w-20 transition duration-300 opacity-80 md:hover:opacity-100 sm:w-24"
-          />
-        </main>
-      </footer>
-    </article>
-  </section>
+  <HeroIndex />
   <section class="p-4">
     <article
       class="max-w-screen-xl pt-72 mx-auto space-y-20 sm:pt-[28rem] lg:pt-[30rem] pb-20"
@@ -370,7 +290,6 @@ const { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaGoogle } = FaIcons;
         <p class="text-gray-200">© RysthCraft. 2024. All rights reserved.</p>
       </div>
 
-      <!-- Social Brands -->
       <div class="mt-3 space-x-1">
         <a
           target="_blank"
@@ -395,8 +314,6 @@ const { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaGoogle } = FaIcons;
           <FaInstagram />
         </a>
       </div>
-      <!-- End Social Brands -->
     </div>
-    <!-- End Grid -->
   </footer>
 </Layout>
