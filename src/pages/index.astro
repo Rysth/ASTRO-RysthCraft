@@ -1,15 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import * as HiIcons from "react-icons/hi2";
 import * as FaIcons from "react-icons/fa";
+import * as HiIcons from "react-icons/hi2";
 import HeroImage from "../assets/images/hero/hero.jpg";
+import YachtIllustration from "../assets/images/illustrations/yacht.svg";
 import AstroImage from "../assets/images/technologies/astro.svg";
 import CSSImage from "../assets/images/technologies/css.svg";
 import HTMLImage from "../assets/images/technologies/html.svg";
 import RailsImage from "../assets/images/technologies/rails.svg";
 import ReactImage from "../assets/images/technologies/react.svg";
+import UpdateProject from "../assets/images/projects/project_1.png";
+import JPProject from "../assets/images/projects/project_2.png";
 import Layout from "../layouts/Layout.astro";
-import YachtIllustration from "../assets/images/illustrations/yacht.svg";
 const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = HiIcons;
 const { FaGithub, FaLinkedin, FaWhatsapp } = FaIcons;
 ---
@@ -193,24 +195,147 @@ const { FaGithub, FaLinkedin, FaWhatsapp } = FaIcons;
             and distinctive solutions to boost your digital presence and drive
             growth.
           </p>
-          <ul class="text-sm sm:text-base">
-            <li>
-              <span class="font-bold text-[var(--CL-primary-blue)] text-lg"
-                >10+</span
-              >
-               Professional Websites
-            </li>
-          </ul>
           <a
             href="http://tinyurl.com/contact-wsp"
             target="_blank"
-            class="flex items-center gap-1 px-6 py-3 mx-auto text-sm text-center text-white duration-100 bg-indigo-700 border border-transparent rounded-lg w-36 sm:mx-0 md:px-8 md:hover:bg-black md:transition"
+            class="flex items-center justify-center gap-1 px-6 py-3 mx-auto text-sm text-center text-white duration-100 bg-indigo-700 border border-transparent rounded-lg w-36 sm:mx-0 md:px-8 md:hover:bg-black md:transition"
           >
             <FaWhatsapp className="text-xl" />
              Contact
           </a>
         </header>
         <Image src={YachtIllustration} alt="Yatch Illustration" />
+      </main>
+    </article>
+  </section>
+  <section class="p-4">
+    <article class="max-w-screen-xl py-12 mx-auto sm:py-24">
+      <header class="mb-10 md:mb-16">
+        <h2
+          class="mb-4 text-2xl font-bold text-center text-gray-800 md:mb-6 sm:text-3xl md:text-4xl"
+        >
+          Our Lastest Projects
+        </h2>
+
+        <p
+          class="max-w-screen-md mx-auto text-sm text-center text-gray-500 md:text-base"
+        >
+          Explore our portfolio of recent projects showcasing our bespoke web
+          solutions for small businesses, each reflecting our commitment to
+          innovation, quality, and client success.
+        </p>
+      </header>
+      <main class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="relative flex flex-col max-w-xs mx-auto text-gray-700 bg-white border shadow-xl bg-clip-border rounded-xl"
+        >
+          <div
+            class="relative mx-4 mt-4 overflow-hidden bg-white h-60 sm:h-72 bg-clip-border rounded-xl"
+          >
+            <Image
+              src={UpdateProject}
+              alt="UpdateEC's website"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex items-center justify-between mb-2">
+              <p
+                class="block text-base antialiased font-bold leading-relaxed text-gray-900"
+              >
+                UpdateEC
+              </p>
+              <p
+                class="block text-sm antialiased font-medium leading-relaxed text-gray-900 uppercase"
+              >
+                e-Commerce
+              </p>
+            </div>
+            <p
+              class="block text-xs antialiased font-normal leading-normal text-gray-500"
+            >
+              e-Commerce platform for a small company to sell gaming products in
+              Ecuador.
+            </p>
+            <div class="flex flex-wrap gap-1 mt-3">
+              <span
+                class="grid w-16 text-xs text-white uppercase bg-indigo-500 rounded place-items-center"
+                >Strapi</span
+              >
+              <span
+                class="grid w-16 text-xs text-white uppercase bg-blue-500 rounded place-items-center"
+              >
+                React
+              </span>
+              <span
+                class="grid w-16 text-xs text-white uppercase bg-purple-500 rounded place-items-center"
+                >Tailwind</span
+              >
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <a
+              href="https://updateec.netlify.app/"
+              target="_blank"
+              class="block text-center uppercase w-full py-2 text-xs font-medium text-white bg-[var(--CL-primary-blue)] rounded md:hover:bg-black md:transition"
+            >
+              See Live</a
+            >
+          </div>
+        </div>
+        <div
+          class="relative flex flex-col max-w-xs mx-auto text-gray-700 bg-white border shadow-xl bg-clip-border rounded-xl"
+        >
+          <div
+            class="relative mx-4 mt-4 overflow-hidden bg-white h-60 sm:h-72 bg-clip-border rounded-xl"
+          >
+            <Image
+              src={JPProject}
+              alt="JP Refrigeration's website"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex items-center justify-between mb-2">
+              <p
+                class="block text-base antialiased font-bold leading-relaxed text-gray-900"
+              >
+                JP Refrigeración
+              </p>
+              <p
+                class="block text-sm antialiased font-medium leading-relaxed text-gray-900 uppercase"
+              >
+                Website
+              </p>
+            </div>
+            <p
+              class="block text-xs antialiased font-normal leading-normal text-gray-500"
+            >
+              Website build for JP Refrigeration, a technician in refrigeration
+              services.
+            </p>
+            <div class="flex flex-wrap gap-1 mt-3">
+              <span
+                class="grid w-16 text-xs text-white uppercase bg-orange-500 rounded place-items-center"
+              >
+                Astro
+              </span>
+              <span
+                class="grid w-16 text-xs text-white uppercase bg-purple-500 rounded place-items-center"
+                >Tailwind</span
+              >
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <a
+              href="https://jprefrigeracion.netlify.app/"
+              target="_blank"
+              class="block text-center uppercase w-full py-2 text-xs font-medium text-white bg-[var(--CL-primary-blue)] rounded md:hover:bg-black md:transition"
+            >
+              See Live</a
+            >
+          </div>
+        </div>
       </main>
     </article>
   </section>
