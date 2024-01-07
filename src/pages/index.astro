@@ -1,13 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import * as ReactIcons from "react-icons/hi2";
 import HeroImage from "../assets/images/hero/hero.jpg";
 import AstroImage from "../assets/images/technologies/astro.svg";
-import ReactImage from "../assets/images/technologies/react.svg";
-import RailsImage from "../assets/images/technologies/rails.svg";
-import HTMLImage from "../assets/images/technologies/html.svg";
 import CSSImage from "../assets/images/technologies/css.svg";
-import * as ReactIcons from "react-icons/hi2";
+import HTMLImage from "../assets/images/technologies/html.svg";
+import RailsImage from "../assets/images/technologies/rails.svg";
+import ReactImage from "../assets/images/technologies/react.svg";
+import Layout from "../layouts/Layout.astro";
+import YachtIllustration from "../assets/images/illustrations/yacht.svg";
 const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
 ---
 
@@ -51,7 +52,7 @@ const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
         <Image
           src={HeroImage}
           alt="Hero Image"
-          class="block w-full h-full max-w-4xl mx-auto rounded-xl"
+          class="block w-full h-full max-w-4xl mx-auto shadow-xl rounded-xl"
         />
         <main
           class="flex flex-wrap items-center justify-center gap-5 mt-5 md:gap-12"
@@ -105,51 +106,64 @@ const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
         </p>
       </header>
       <main
-        class="flex flex-col items-center justify-center max-w-screen-lg gap-5 mx-auto sm:flex-row"
+        class="grid justify-center max-w-screen-lg gap-5 mx-auto sm:grid-cols-3 sm:flex-row"
       >
-        <div class="flex flex-col items-center">
+        <div
+          class="flex flex-col items-center justify-between p-4 border rounded-xl"
+        >
           <div
-            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8"
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8 h-1/4"
           >
             <HiDevicePhoneMobile className="text-6xl" />
           </div>
-          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl">
+          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4">
             Mobile-First Design
           </h3>
-          <p class="max-w-sm mb-2 text-sm text-center text-gray-500">
+          <p class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4">
             We ensure your website looks great and works flawlessly on all
             devices, providing an optimal experience for every visitor.
           </p>
         </div>
-        <div class="flex flex-col items-center">
+        <div
+          class="flex flex-col items-center justify-between p-4 border rounded-xl"
+        >
           <div
-            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8"
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8 h-1/4"
           >
             <HiShieldCheck className="text-6xl" />
           </div>
-          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl">
+          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4">
             Secure and Reliable
           </h3>
-          <p class="max-w-sm mb-2 text-sm text-center text-gray-500">
+          <p class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4">
             Prioritizing your website's security and uptime, we implement robust
             security measures and reliable hosting solutions.
           </p>
         </div>
-        <div class="flex flex-col items-center">
+        <div
+          class="flex flex-col items-center justify-between p-4 border rounded-xl"
+        >
           <div
-            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8"
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8 h-1/4"
           >
             <HiBolt className="text-6xl" />
           </div>
-          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl">
+          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4">
             Speed Optimized
           </h3>
-          <p class="max-w-sm mb-2 text-sm text-center text-gray-500">
+          <p class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4">
             Each site boasts hand-written code and efficient design, ensuring
             rapid load times, improved user satisfaction, and enhanced SEO
             rankings.
           </p>
         </div>
+      </main>
+    </article>
+  </section>
+  <section class="p-4">
+    <article class="max-w-screen-xl mx-auto">
+      <main class="grid sm:grid-cols-2">
+        <Image src={YachtIllustration} alt="Yatch Illustration" />
       </main>
     </article>
   </section>
