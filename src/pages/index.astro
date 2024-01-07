@@ -92,7 +92,7 @@ const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
     >
       <header class="mb-10 md:mb-16">
         <h2
-          class="mb-4 text-2xl font-bold text-center text-gray-800 md:mb-6 sm:text-3xl"
+          class="mb-4 text-2xl font-bold text-center text-gray-800 md:mb-6 sm:text-3xl md:text-4xl"
         >
           Our Solution for Your Business
         </h2>
@@ -106,52 +106,64 @@ const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
         </p>
       </header>
       <main
-        class="grid justify-center max-w-screen-lg gap-5 mx-auto sm:grid-cols-3 sm:flex-row"
+        class="grid justify-center max-w-screen-lg gap-5 mx-auto sm:gap-8 sm:grid-cols-3 sm:flex-row"
       >
         <div
-          class="flex flex-col items-center justify-between p-4 border rounded-xl"
+          class="flex flex-col items-center justify-between p-4 py-8 border rounded-xl md:hover:bg-[var(--CL-primary-blue)] group transition duration-300"
         >
           <div
-            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8 h-1/4"
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] group-hover:text-white sm:mb-8 h-1/4"
           >
             <HiDevicePhoneMobile className="text-6xl" />
           </div>
-          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4">
+          <h3
+            class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4 group-hover:text-white"
+          >
             Mobile-First Design
           </h3>
-          <p class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4">
+          <p
+            class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4 group-hover:text-white"
+          >
             We ensure your website looks great and works flawlessly on all
             devices, providing an optimal experience for every visitor.
           </p>
         </div>
         <div
-          class="flex flex-col items-center justify-between p-4 border rounded-xl"
+          class="flex flex-col items-center justify-between p-4 py-8 border rounded-xl md:hover:bg-[var(--CL-primary-blue)] group transition duration-300"
         >
           <div
-            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8 h-1/4"
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] group-hover:text-white sm:mb-8 h-1/4"
           >
             <HiShieldCheck className="text-6xl" />
           </div>
-          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4">
+          <h3
+            class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4 group-hover:text-white"
+          >
             Secure and Reliable
           </h3>
-          <p class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4">
+          <p
+            class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4 group-hover:text-white"
+          >
             Prioritizing your website's security and uptime, we implement robust
             security measures and reliable hosting solutions.
           </p>
         </div>
         <div
-          class="flex flex-col items-center justify-between p-4 border rounded-xl"
+          class="flex flex-col items-center justify-between p-4 py-8 border rounded-xl md:hover:bg-[var(--CL-primary-blue)] group transition duration-300"
         >
           <div
-            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] sm:mb-8 h-1/4"
+            class="flex items-center justify-center mb-5 text-[var(--CL-primary-blue)] group-hover:text-white sm:mb-8 h-1/4"
           >
             <HiBolt className="text-6xl" />
           </div>
-          <h3 class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4">
+          <h3
+            class="mb-2 text-lg font-semibold text-center md:text-xl h-1/4 group-hover:text-white"
+          >
             Speed Optimized
           </h3>
-          <p class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4">
+          <p
+            class="max-w-sm mb-2 text-sm text-center text-gray-500 h-2/4 group-hover:text-white"
+          >
             Each site boasts hand-written code and efficient design, ensuring
             rapid load times, improved user satisfaction, and enhanced SEO
             rankings.
@@ -160,9 +172,30 @@ const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = ReactIcons;
       </main>
     </article>
   </section>
-  <section class="p-4">
-    <article class="max-w-screen-xl mx-auto">
-      <main class="grid sm:grid-cols-2">
+  <section class="p-4 bg-slate-100">
+    <article class="max-w-screen-xl py-12 mx-auto sm:py-24">
+      <main class="grid gap-10 sm:grid-cols-2">
+        <header
+          class="flex flex-col justify-center gap-5 text-center sm:gap-10 sm:text-left"
+        >
+          <h2
+            class="text-3xl font-bold md:leading-loose sm:text-2xl md:text-4xl lg:text-6xl text-[var(--CL-primary-blue)]"
+          >
+            Web Solutions for Small Businesses
+          </h2>
+          <p class="max-w-md text-sm text-gray-500 sm:text-base">
+            Custom web designs tailored for small businesses. Secure, efficient,
+            and distinctive solutions to boost your digital presence and drive
+            growth.
+          </p>
+          <a
+            href="https://github.com/Rysth"
+            target="_blank"
+            class="w-32 px-6 py-3 text-sm text-center text-white duration-100 bg-indigo-700 border border-transparent rounded-lg md:px-8 md:hover:bg-black md:transition"
+          >
+            Contact
+          </a>
+        </header>
         <Image src={YachtIllustration} alt="Yatch Illustration" />
       </main>
     </article>
