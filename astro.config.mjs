@@ -5,12 +5,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    react(),
-  ],
+  integrations: [tailwind(), react()],
   vite: {
     ssr: {
       noExternal: ["react-icons"],

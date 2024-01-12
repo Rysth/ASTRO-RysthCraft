@@ -2,8 +2,7 @@
 import { Image } from "astro:assets";
 import BrandImage from "../../../assets/images/brand/brand.svg";
 import * as ReactIcons from "react-icons/hi2";
-const { HiBars3BottomRight } = ReactIcons;
-import { Button } from "@/components/ui/button";
+const { HiBars3BottomRight, HiPhoneArrowDownLeft } = ReactIcons;
 ---
 
 <nav class="fixed top-0 z-50 w-full bg-[var(--CL-primary-blue)]">
@@ -14,20 +13,18 @@ import { Button } from "@/components/ui/button";
       <Image src={BrandImage} class="w-28 sm:w-32" alt="Flowbite Logo" />
     </a>
     <div class="flex items-center space-x-3 md:order-2 md:space-x-0">
-      <Button>
-        <a href="/contacts">Contact</a>
-      </Button>
-      <Button
-        size="icon"
-        variant="ghost"
+      <a href="/contacts" class="btn">
+        <HiPhoneArrowDownLeft className="text-lg" /> Contact
+      </a>
+      <button
+        class="px-0 md:hidden btn btn-ghost"
         data-collapse-toggle="navbar-sticky"
         aria-controls="navbar-sticky"
         aria-expanded="false"
-        className="md:hidden"
       >
         <span class="sr-only">Open main menu</span>
         <HiBars3BottomRight className="text-white text-4xl" />
-      </Button>
+      </button>
     </div>
     <div
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
