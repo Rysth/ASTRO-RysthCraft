@@ -12,7 +12,7 @@ import HTMLImage from "../assets/images/technologies/html.svg";
 import RailsImage from "../assets/images/technologies/rails.svg";
 import ReactImage from "../assets/images/technologies/react.svg";
 import Layout from "../layouts/Layout.astro";
-const { HiDevicePhoneMobile, HiShieldCheck, HiBolt } = HiIcons;
+const { HiDevicePhoneMobile, HiShieldCheck, HiBolt, HiCheckCircle } = HiIcons;
 const { FaWhatsapp } = FaIcons;
 const { FaGithub, FaLinkedin } = FaIcons;
 ---
@@ -199,7 +199,7 @@ const { FaGithub, FaLinkedin } = FaIcons;
           <a
             href="http://tinyurl.com/contact-wsp"
             target="_blank"
-            class="btn btn-neutral md:max-w-32"
+            class="btn bg-[var(--CL-primary-blue)] text-white md:max-w-32"
           >
             <FaWhatsapp className="text-xl" />
             Contact
@@ -350,6 +350,219 @@ const { FaGithub, FaLinkedin } = FaIcons;
             >
           </div>
         </div>
+      </main>
+    </article>
+  </section>
+  <section class="p-4">
+    <article class="max-w-screen-xl py-12 mx-auto sm:pb-24">
+      <header class="mb-10 md:mb-16">
+        <h2
+          class="mb-4 text-2xl font-bold text-center text-gray-800 md:mb-6 sm:text-3xl md:text-4xl"
+        >
+          Our Plans
+        </h2>
+        <p
+          class="max-w-screen-md mx-auto text-sm text-center text-gray-500 md:text-base"
+        >
+          Discover a range of flexible web design and development plans tailored
+          to fit the unique needs and budgets of small businesses. Your perfect
+          digital solution awaits.
+        </p>
+      </header>
+      <main class="grid max-w-6xl gap-4 mx-auto md:gap-8 lg:grid-cols-3">
+        <article
+          class="max-w-sm p-10 mx-auto space-y-8 border shadow-xl rounded-xl lg:max-w-full lg:mx-0"
+        >
+          <header class="text-center">
+            <h3 class="text-xl font-bold sm:text-2xl">Standard</h3>
+            <p class="text-xs italic">Starting at</p>
+            <h4 class="font-bold text-7xl text-[var(--CL-primary-blue)]">
+              <span class="text-4xl">$</span>200
+            </h4>
+          </header>
+          <main>
+            <ul class="grid gap-2 text-sm">
+              <li class="flex items-center font-bold">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                1 Landing Page
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Responsive Design
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Domain Name Included
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                SSL Certification
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Google Business Creation
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Professional Hosting 20 <span class="!text-xs">/month</span>
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                1 Week Estimated Time
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Free Maintenance and Updates
+              </li>
+              <li class="mt-4">
+                <a
+                  href="/contacts"
+                  class="w-full btn bg-[var(--CL-primary-blue)] text-white"
+                >
+                  Contact Now</a
+                >
+              </li>
+            </ul>
+          </main>
+        </article>
+        <article
+          class="p-10 space-y-8 border shadow-xl rounded-xl max-w-sm mx-auto lg:max-w-full lg:mx-0 bg-[var(--CL-primary-blue)] text-white"
+        >
+          <header class="text-center">
+            <h3 class="text-xl font-bold sm:text-2xl">Professional</h3>
+            <p class="text-xs italic">Starting at</p>
+
+            <h4 class="font-bold text-7xl">
+              <span class="text-4xl">$</span>400
+            </h4>
+          </header>
+          <main>
+            <ul class="grid gap-2 text-sm">
+              <li class="flex items-center font-bold">
+                <HiCheckCircle className="mr-2 text-xl" />
+                4 Pages
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl " />
+                Responsive Design
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl" />
+                Domain Name Included
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl" />
+                SSL Certification
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl" />
+                Google Business Creation
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl" />
+                Professional Hosting 30 <span class="!text-xs">/month</span>
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl" />
+                1 - 2 Weeks Estimated Time
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle className="mr-2 text-xl" />
+                Free Maintenance and Updates
+              </li>
+              <li class="mt-4">
+                <a href="/contacts" class="w-full btn">Contact Now</a>
+              </li>
+            </ul>
+          </main>
+        </article>
+        <article
+          class="max-w-sm p-10 mx-auto space-y-8 border shadow-xl rounded-xl lg:max-w-full lg:mx-0"
+        >
+          <header class="text-center">
+            <h3 class="text-xl font-bold sm:text-2xl">Applications</h3>
+            <p class="text-xs italic">Starting at</p>
+            <h4 class="font-bold text-7xl text-[var(--CL-primary-blue)]">
+              <span class="text-4xl">$</span>800
+            </h4>
+          </header>
+          <main>
+            <ul class="grid gap-2 text-sm">
+              <li class="flex items-center font-bold">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                1 Full-Stack Application
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Responsive Design
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Domain Name Included
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                SSL Certification
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Google Business Creation
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Professional Hosting 40 <span class="!text-xs">/month</span>
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                1 - 2 Months Estimated Time
+              </li>
+              <li class="flex items-center">
+                <HiCheckCircle
+                  className="mr-2 text-xl text-[var(--CL-primary-blue)]"
+                />
+                Free Maintenance and Updates
+              </li>
+              <li class="mt-4">
+                <a
+                  href="/contacts"
+                  class="w-full btn bg-[var(--CL-primary-blue)] text-white"
+                >
+                  Contact Now</a
+                >
+              </li>
+            </ul>
+          </main>
+        </article>
       </main>
     </article>
   </section>
