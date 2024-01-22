@@ -5,18 +5,18 @@ import * as ReactIcons from "react-icons/fa";
 const { FaWhatsapp } = ReactIcons;
 ---
 
-<nav class="sticky top-0 shadow shadow-black/5 bg-brand-blue">
-  <div class="max-w-screen-xl mx-auto navbar md:py-6">
+<nav class="sticky top-0 z-50 shadow shadow-black/5 bg-brand-blue">
+  <div class="max-w-screen-xl mx-auto navbar lg:py-5">
     <div class="navbar-start">
       <div class="dropdown">
-        <div
+        <button
           tabindex="0"
           role="button"
-          class="text-white btn btn-ghost lg:hidden"
+          class="text-white btn btn-ghost lg:hidden ps-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5"
+            class="w-7 h-7"
             viewBox="0 0 24 24"
             stroke="currentColor"
             ><path
@@ -26,7 +26,7 @@ const { FaWhatsapp } = ReactIcons;
               fill="#ffffff"
               d="M4 6h16M4 12h8m-8 6h16"></path></svg
           >
-        </div>
+        </button>
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -37,8 +37,8 @@ const { FaWhatsapp } = ReactIcons;
           <li><a href="/">Contactos</a></li>
         </ul>
       </div>
-      <a class="text-xl btn btn-ghost" href="/">
-        <Image src={BrandImage} alt="RysthDesign Logo" class="w-20 md:w-24" />
+      <a class="text-xl" href="/">
+        <Image src={BrandImage} alt="RysthDesign Logo" class="w-20 lg:w-32" />
       </a>
     </div>
     <div class="hidden text-white navbar-center lg:flex">
@@ -52,6 +52,7 @@ const { FaWhatsapp } = ReactIcons;
     <div class="navbar-end">
       <a
         href="http://tinyurl.com/contact-ws"
+        target="_blank"
         class="text-xs text-white bg-green-500 border-transparent btn lg:text-sm btn-neutral"
       >
         <FaWhatsapp className="block text-2xl" />
