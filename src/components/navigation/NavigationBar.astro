@@ -1,0 +1,62 @@
+---
+import BrandImage from "../../assets/images/brand/brand.svg";
+import { Image } from "astro:assets";
+import * as ReactIcons from "react-icons/fa";
+const { FaWhatsapp } = ReactIcons;
+---
+
+<nav class="sticky top-0 shadow shadow-black/5 bg-brand-blue">
+  <div class="max-w-screen-xl mx-auto navbar md:py-6">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div
+          tabindex="0"
+          role="button"
+          class="text-white btn btn-ghost lg:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              fill="#ffffff"
+              d="M4 6h16M4 12h8m-8 6h16"></path></svg
+          >
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/">Servicios</a></li>
+          <li><a href="/">Portfolio</a></li>
+          <li><a href="/">Contactos</a></li>
+        </ul>
+      </div>
+      <a class="text-xl btn btn-ghost" href="/">
+        <Image src={BrandImage} alt="RysthDesign Logo" class="w-20 md:w-24" />
+      </a>
+    </div>
+    <div class="hidden text-white navbar-center lg:flex">
+      <ul class="gap-2 px-1 menu menu-horizontal">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/">Servicios</a></li>
+        <li><a href="/">Portfolio</a></li>
+        <li><a href="/">Contactos</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a
+        href="http://tinyurl.com/contact-ws"
+        class="text-xs text-white bg-green-500 border-transparent btn lg:text-sm btn-neutral"
+      >
+        <FaWhatsapp className="block text-2xl" />
+        Contactar
+      </a>
+    </div>
+  </div>
+</nav>

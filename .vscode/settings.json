@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "prettier.bracketSameLine": false,
   "prettier.printWidth": 120,
   "prettier.jsxSingleQuote": true,
