@@ -5,8 +5,8 @@ import * as ReactIcons from "react-icons/fa";
 const { FaWhatsapp } = ReactIcons;
 ---
 
-<nav class="sticky top-0 z-50 shadow shadow-black/5 bg-brand-blue">
-  <div class="max-w-screen-xl mx-auto navbar lg:py-5">
+<nav class="sticky top-0 z-50 transition duration-300 md:py-2" id="navbar">
+  <div class="max-w-screen-xl mx-auto navbar">
     <div class="navbar-start">
       <div class="dropdown">
         <button
@@ -61,3 +61,32 @@ const { FaWhatsapp } = ReactIcons;
     </div>
   </div>
 </nav>
+
+<script>
+  const navBarElement = document.querySelector("#navbar");
+
+  function handleScroll() {
+    const isMobile = window.innerWidth < 640;
+    if (isMobile) {
+      // En dispositivos móviles, siempre mantener el fondo transparente
+      navBarElement.classList.add("bg-brand-blue");
+      navBarElement.classList.remove("bg-transparent");
+      return;
+    }
+
+    const scrollTop = window.scrollY;
+    if (scrollTop >= 200) {
+      navBarElement.classList.add("bg-brand-blue", "shadow");
+      navBarElement.classList.remove("bg-transparent");
+    } else {
+      navBarElement.classList.remove("bg-brand-blue", "shadow");
+      navBarElement.classList.add("bg-transparent");
+    }
+  }
+
+  // Inicializa el estado del navbar al cargar
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll); // Asegúrate de que el estilo se actualice al redimensionar
+</script>
