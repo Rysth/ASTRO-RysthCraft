@@ -2,27 +2,32 @@
 import Layout from "../layouts/Layout.astro";
 import StaticWebsite from "../assets/images/illustrations/static_website.svg";
 import { Image } from "astro:assets";
-import * as ReactIcons from "react-icons/fa";
-const { FaWhatsapp, FaArrowRight } = ReactIcons;
+import * as HiIcons from "react-icons/hi2";
+import * as FaIcons from "react-icons/fa";
+import * as IoIcons from "react-icons/io5";
+import ServiceCard from "../components/ui/ServiceCard.astro";
+const { FaWhatsapp, FaArrowRight } = FaIcons;
+const { IoLogoWebComponent } = IoIcons;
+const { HiOutlineCodeBracketSquare, HiOutlineBuildingStorefront } = HiIcons;
 ---
 
 <Layout title="RysthDesign | Web Designer | Desarrollador Web">
   <section class="relative h-screen p-2 lg:h-max">
     <article
-      class="h-full max-w-screen-xl pt-16 mx-auto space-y-10 lg:pt-32 lg:grid lg:grid-cols-2"
+      class="h-full max-w-screen-xl gap-20 py-16 mx-auto space-y-10 lg:py-28 lg:pb-24 lg:grid lg:grid-cols-2"
     >
       <Image src={StaticWebsite} alt="" class="w-full lg:h-full" />
       <main
         class="justify-center space-y-4 text-center lg:text-left lg:flex lg:flex-col"
       >
         <h2
-          class="text-2xl font-bold md:text-3xl lg:text-5xl xl:text-6xl lg:max-w-2xl"
+          class="text-2xl font-bold md:text-3xl lg:text-5xl lg:max-w-2xl lg:!leading-[3.5rem]"
         >
-          Diseñando Aplicaciones y Sitios Web Profesionales
+          Desarrollo de Aplicaciones y Sitios Web Profesionales
         </h2>
-        <p class="text-sm text-gray-500 md:text-base lg:max-w-xl">
-          Desarrollador Web Full-Stack para asistirte con soluciones
-          tecnologicas modernas, escalables y seguras.
+        <p class="max-w-xs text-sm text-gray-500 md:text-base lg:max-w-lg">
+          Servicios de desarrollo web para negocios con soluciones tecnológicas
+          modernas, escalables y seguras.
         </p>
         <div class="mt-10">
           <a
@@ -37,6 +42,40 @@ const { FaWhatsapp, FaArrowRight } = ReactIcons;
           </a>
         </div>
       </main>
+    </article>
+  </section>
+  <section class="p-2">
+    <article class="max-w-screen-xl py-12 mx-auto md:py-24 lg:py-36">
+      <header class="space-y-3 text-center">
+        <h3 class="text-2xl font-bold md:text-4xl">Nuestros Servicios</h3>
+        <p class="max-w-md mx-auto text-sm text-gray-500 md:text-base">
+          Expertos en desarrollo web, diseño de sitios y soluciones e-commerce
+          personalizadas.
+        </p>
+      </header>
+
+      <section class="grid grid-cols-1 gap-6 mt-16 md:mt-20 md:grid-cols-3">
+        <ServiceCard
+          title="Aplicaciones Web"
+          description="Aplicaciones web robustas y escalables, con tecnologías modernas para negocios en crecimiento."
+          IconComponent={HiOutlineCodeBracketSquare}
+          bgColorClass="bg-cyan-100"
+        />
+
+        <ServiceCard
+          title="Diseño de Sitios Web"
+          description="Diseños web atractivos y funcionales, centrados en la experiencia del usuario y la identidad de marca."
+          IconComponent={IoLogoWebComponent}
+          bgColorClass="bg-indigo-100"
+        />
+
+        <ServiceCard
+          title="Plataformas e-Commerce"
+          description="Soluciones e-commerce personalizadas para una experiencia de compra óptima y segura."
+          IconComponent={HiOutlineBuildingStorefront}
+          bgColorClass="bg-purple-100"
+        />
+      </section>
     </article>
   </section>
 </Layout>
