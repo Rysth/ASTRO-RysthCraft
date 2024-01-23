@@ -6,6 +6,7 @@ import * as HiIcons from "react-icons/hi2";
 import * as FaIcons from "react-icons/fa";
 import * as IoIcons from "react-icons/io5";
 import ServiceCard from "../components/ui/ServiceCard.astro";
+import Subtitle from "../components/heading/Subtitle.astro";
 const { FaWhatsapp, FaArrowRight } = FaIcons;
 const { IoLogoWebComponent } = IoIcons;
 const { HiOutlineCodeBracketSquare, HiOutlineBuildingStorefront } = HiIcons;
@@ -46,13 +47,10 @@ const { HiOutlineCodeBracketSquare, HiOutlineBuildingStorefront } = HiIcons;
   </section>
   <section class="p-2">
     <article class="max-w-screen-xl py-12 mx-auto md:py-24 lg:py-36">
-      <header class="space-y-3 text-center">
-        <h3 class="text-2xl font-bold md:text-4xl">Nuestros Servicios</h3>
-        <p class="max-w-md mx-auto text-sm text-gray-500 md:text-base">
-          Expertos en desarrollo web, diseño de sitios y soluciones e-commerce
-          personalizadas.
-        </p>
-      </header>
+      <Subtitle
+        title="Nuestros Servicios"
+        description="Desarrollo web y diseño de sitios intuitivos, con enfoque en plataformas e-commerce innovadoras y experiencia de usuario."
+      />
 
       <section class="grid grid-cols-1 gap-6 mt-16 md:mt-20 md:grid-cols-3">
         <ServiceCard

@@ -8,12 +8,12 @@ const { title, description, IconComponent, bgColorClass } = Astro.props;
   <header class="relative mb-6">
     <IconComponent className="w-full h-28 relative z-20" />
     <span
-      class={`absolute z-10 w-10 h-10 transition duration-700 rounded-full ${bgColorClass} bottom-1 left-1 group-hover:-translate-y-16 group-hover:translate-x-16`}
+      class={`absolute z-10 w-14 h-14 transition duration-700 rounded-full ${bgColorClass} bottom-0 left-0 group-hover:-translate-y-14 group-hover:translate-x-14`}
     ></span>
   </header>
-  <div class="space-y-4 h-1/4">
+  <div class="space-y-4 h-28">
     <h4 class="text-xl font-semibold">{title}</h4>
-    <p class="max-w-xs text-sm leading-5 text-gray-500">
+    <p class="max-w-xs text-sm leading-6 text-gray-500">
       {description}
     </p>
   </div>
