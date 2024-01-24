@@ -33,6 +33,27 @@ const { title } = Astro.props;
     --CL-primary: #2e3191;
   }
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2e3191;
+    border-radius: 10rem;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
+
   body {
     font-family: "Poppins", sans-serif;
     background-color: white;
