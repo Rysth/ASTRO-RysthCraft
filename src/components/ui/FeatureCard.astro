@@ -1,0 +1,20 @@
+---
+// Props para el componente FeatureCard
+const { title, description, IconComponent, bgColor } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center p-4 text-center h-80">
+  <header
+    class={`relative p-8 mb-6 transition duration-500 border rounded-full group hover:bg-${bgColor}`}
+  >
+    <IconComponent
+      className={`h-28 w-28 relative z-20 group-hover:text-white transition text-${bgColor}`}
+    />
+  </header>
+  <div class="h-20 space-y-4">
+    <h3 class="text-xl font-semibold">{title}</h3>
+    <p class="max-w-xs text-sm leading-6 text-gray-500">
+      {description}
+    </p>
+  </div>
+</div>
