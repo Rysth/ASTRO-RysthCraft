@@ -1,14 +1,46 @@
 ---
 // Props para el componente FeatureCard
 const { title, description, IconComponent, bgColor } = Astro.props;
+
+// Array de objetos para manejar colores y estilos
+const colorStyles = {
+  "orange-500": {
+    textColor: "text-orange-500",
+    hoverColor: "hover:bg-orange-500",
+  },
+  "green-500": {
+    textColor: "text-green-500",
+    hoverColor: "hover:bg-green-500",
+  },
+  "violet-500": {
+    textColor: "text-violet-500",
+    hoverColor: "hover:bg-violet-500",
+  },
+  "blue-500": { textColor: "text-blue-500", hoverColor: "hover:bg-blue-500" },
+  // Agrega más colores según sea necesario
+};
+
+// Función para obtener las clases de color
+function getColorStyle(color) {
+  return (
+    colorStyles[color] || {
+      textColor: "text-gray-500",
+      hoverColor: "hover:bg-gray-500",
+    }
+  );
+}
 ---
 
 <div class="flex flex-col items-center justify-center p-4 text-center h-80">
   <header
-    class={`relative p-8 mb-6 transition duration-500 border rounded-full group hover:bg-${bgColor}`}
+    class={`relative p-8 mb-6 transition duration-500 border rounded-full group ${
+      getColorStyle(bgColor).hoverColor
+    }`}
   >
     <IconComponent
-      className={`h-28 w-28 relative z-20 group-hover:text-white transition text-${bgColor}`}
+      className={`h-28 w-28 relative z-20 group-hover:text-white transition ${
+        getColorStyle(bgColor).textColor
+      }`}
     />
   </header>
   <div class="h-20 space-y-4">
