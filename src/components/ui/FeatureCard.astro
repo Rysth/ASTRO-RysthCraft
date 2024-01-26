@@ -2,21 +2,24 @@
 // Props para el componente FeatureCard
 const { title, description, IconComponent, bgColor } = Astro.props;
 
-// Array de objetos para manejar colores y estilos
+// Objeto para manejar colores y estilos
 const colorStyles = {
-  "orange-500": {
-    textColor: "text-orange-500",
-    hoverColor: "hover:bg-orange-500",
+  "violet-500": {
+    textColor: "text-violet-500",
+    hoverShadowColor: "hover:shadow-violet-500/50",
   },
   "green-500": {
     textColor: "text-green-500",
-    hoverColor: "hover:bg-green-500",
+    hoverShadowColor: "hover:shadow-green-500/50",
   },
   "indigo-500": {
     textColor: "text-indigo-500",
-    hoverColor: "hover:bg-indigo-500",
+    hoverShadowColor: "hover:shadow-indigo-500/50",
   },
-  "blue-500": { textColor: "text-blue-500", hoverColor: "hover:bg-blue-500" },
+  "blue-500": {
+    textColor: "text-blue-500",
+    hoverShadowColor: "hover:shadow-blue-500/50",
+  },
   // Agrega más colores según sea necesario
 };
 
@@ -25,25 +28,25 @@ function getColorStyle(color) {
   return (
     colorStyles[color] || {
       textColor: "text-gray-500",
-      hoverColor: "hover:bg-gray-500",
+      hoverShadowColor: "hover:shadow-gray-500/50",
     }
   );
 }
 ---
 
-<div class="flex flex-col items-center justify-center p-4 text-center h-80">
+<div class="flex flex-col items-center justify-center p-4 shadow-center h-80">
   <header
-    class={`relative p-8 mb-6 transition duration-500 border rounded-full group ${
-      getColorStyle(bgColor).hoverColor
+    class={`relative p-8 mb-6 transition duration-300 shadow hover:shadow-xl rounded-full group ${
+      getColorStyle(bgColor).hoverShadowColor
     }`}
   >
     <IconComponent
-      className={`h-28 w-28 relative z-20 group-hover:text-white transition ${
+      className={`h-28 w-28 relative z-20 transition duration-300 ${
         getColorStyle(bgColor).textColor
       }`}
     />
   </header>
-  <div class="h-20 space-y-4">
+  <div class="h-20 space-y-4 text-center">
     <h3 class="text-xl font-semibold">{title}</h3>
     <p class="max-w-xs text-sm leading-6 text-gray-500">
       {description}
