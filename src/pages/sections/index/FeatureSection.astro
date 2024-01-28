@@ -1,13 +1,12 @@
 ---
+import * as HiIcons from "react-icons/hi2";
 import Subtitle from "../../../components/heading/Subtitle.astro";
 import FeatureCard from "../../../components/ui/FeatureCard.astro";
-import * as HiIcons from "react-icons/hi2";
-
 const {
   HiOutlineCodeBracketSquare,
-  HiOutlineLightBulb,
-  HiOutlineScale,
-  HiOutlineShieldCheck,
+  HiMiniBarsArrowUp,
+  HiMiniCubeTransparent,
+  HiOutlineCloud,
 } = HiIcons;
 ---
 
@@ -27,19 +26,19 @@ const {
       <FeatureCard
         title="Integración de Seguridad"
         description="Seguridad robusta para protección de datos."
-        IconComponent={HiOutlineShieldCheck}
+        IconComponent={HiOutlineCloud}
         bgColor="green-500"
       />
       <FeatureCard
         title="Infraestructura Escalable"
         description="Soluciones que crecen con tus necesidades."
-        IconComponent={HiOutlineScale}
+        IconComponent={HiMiniCubeTransparent}
         bgColor="indigo-500"
       />
       <FeatureCard
         title="Desempeño Óptimo"
         description="Alta eficiencia y velocidad en cada proyecto."
-        IconComponent={HiOutlineLightBulb}
+        IconComponent={HiMiniBarsArrowUp}
         bgColor="blue-500"
       />
     </section>
