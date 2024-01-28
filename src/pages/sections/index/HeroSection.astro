@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import * as FaIcons from "react-icons/fa";
+import WaveSVG from "../../../assets/background/wave.png";
+import ResponsiveIllustration from "../../../assets/images/illustrations/responsive.svg";
+const { FaArrowRight } = FaIcons;
+---
+
+<section class="h-full p-2 lg:h-max">
+  <Image src={WaveSVG} alt="" class="absolute top-0 left-0 w-full md:w-4/5" />
+  <article
+    class="relative z-20 max-w-screen-xl gap-20 py-16 mx-auto space-y-10 h-max lg:py-32 lg:pb-16 lg:grid lg:grid-cols-2"
+  >
+    <Image src={ResponsiveIllustration} alt="" class="w-full lg:h-full" />
+    <main
+      class="justify-center space-y-4 text-center lg:text-left lg:flex lg:flex-col"
+    >
+      <h2
+        class="text-2xl font-bold md:text-3xl lg:text-5xl lg:max-w-2xl lg:!leading-[3.5rem]"
+      >
+        Desarrollo de Aplicaciones y Sitios Web Profesionales
+      </h2>
+      <p
+        class="max-w-lg mx-auto text-sm leading-6 text-gray-500 md:text-base lg:ml-0"
+      >
+        Servicios de desarrollo web para negocios con soluciones tecnológicas
+        modernas, escalables y seguras.
+      </p>
+      <div class="mt-10">
+        <a
+          href="http://tinyurl.com/contact-ws"
+          target="_blank"
+          class="text-xs text-white border-transparent btn lg:text-sm btn-neutral bg-brand-blue group"
+        >
+          Contactar
+          <FaArrowRight
+            className="block text-xl group-hover:translate-x-1 transition"
+          />
+        </a>
+      </div>
+    </main>
+  </article>
+</section>

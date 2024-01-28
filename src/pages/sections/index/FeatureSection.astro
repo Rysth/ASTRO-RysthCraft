@@ -1,0 +1,47 @@
+---
+import Subtitle from "../../../components/heading/Subtitle.astro";
+import FeatureCard from "../../../components/ui/FeatureCard.astro";
+import * as HiIcons from "react-icons/hi2";
+
+const {
+  HiOutlineCodeBracketSquare,
+  HiOutlineLightBulb,
+  HiOutlineScale,
+  HiOutlineShieldCheck,
+} = HiIcons;
+---
+
+<section class="p-2">
+  <article class="max-w-screen-xl py-12 mx-auto md:py-24 lg:py-24">
+    <Subtitle
+      title="Nuestras Características"
+      description="Explora nuestras competencias clave en diseño y desarrollo web."
+    />
+    <section class="grid grid-cols-1 gap-6 mt-16 md:mt-20 md:grid-cols-4">
+      <FeatureCard
+        title="Diseño Responsivo"
+        description="Adaptabilidad y eficiencia en diferentes dispositivos."
+        IconComponent={HiOutlineCodeBracketSquare}
+        bgColor="violet-500"
+      />
+      <FeatureCard
+        title="Integración de Seguridad"
+        description="Seguridad robusta para protección de datos."
+        IconComponent={HiOutlineShieldCheck}
+        bgColor="green-500"
+      />
+      <FeatureCard
+        title="Infraestructura Escalable"
+        description="Soluciones que crecen con tus necesidades."
+        IconComponent={HiOutlineScale}
+        bgColor="indigo-500"
+      />
+      <FeatureCard
+        title="Desempeño Óptimo"
+        description="Alta eficiencia y velocidad en cada proyecto."
+        IconComponent={HiOutlineLightBulb}
+        bgColor="blue-500"
+      />
+    </section>
+  </article>
+</section>
