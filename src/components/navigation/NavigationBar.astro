@@ -5,7 +5,10 @@ import * as ReactIcons from "react-icons/fa";
 const { FaWhatsapp } = ReactIcons;
 ---
 
-<nav class="sticky top-0 z-50 px-4 transition duration-300 md:py-4" id="navbar">
+<nav
+  class="fixed top-0 z-50 w-full px-4 transition duration-300 md:py-4 bg-brand-blue"
+  id="navbar"
+>
   <div class="max-w-screen-xl p-0 mx-auto navbar">
     <div class="navbar-start">
       <div class="dropdown">
@@ -33,7 +36,7 @@ const { FaWhatsapp } = ReactIcons;
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li><a href="/">Inicio</a></li>
-          <li><a href="/servicio">Servicios</a></li>
+          <li><a href="/servicios">Servicios</a></li>
           <li><a href="/portfolio">Portfolio</a></li>
           <li><a href="/contactos">Contactos</a></li>
         </ul>
@@ -45,7 +48,7 @@ const { FaWhatsapp } = ReactIcons;
     <div class="hidden text-white navbar-center lg:flex">
       <ul class="gap-2 px-1 menu menu-horizontal">
         <li><a href="/">Inicio</a></li>
-        <li><a href="/servicio">Servicios</a></li>
+        <li><a href="/servicios">Servicios</a></li>
         <li><a href="/portfolio">Portfolio</a></li>
         <li><a href="/contactos">Contactos</a></li>
       </ul>

@@ -1,0 +1,74 @@
+---
+import ServiceCard from "@/components/ui/ServiceCard.astro";
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineBolt,
+  HiOutlineBuildingStorefront,
+  HiOutlineChartBar,
+  HiOutlineCodeBracketSquare,
+  HiOutlineLightBulb,
+} from "react-icons/hi2";
+import { IoLogoWebComponent } from "react-icons/io5";
+---
+
+<Layout
+  title="RysthDesign | Servicios en Diseño y Desarrollo Web Profesionales"
+>
+  <header
+    class="py-12 pt-24 text-center text-white bg-gradient-to-t bg-brand-gradient md:pb-24 md:pt-36"
+  >
+    <h2 class="text-3xl font-bold">Nuestros Servicios</h2>
+    <div class="flex justify-center text-sm breadcrumbs">
+      <ul class="text-white/80">
+        <li><a href="/">Inicio</a></li>
+        <li>Servicios</li>
+      </ul>
+    </div>
+  </header>
+  <section>
+    <article class="max-w-screen-xl py-12 mx-auto md:py-24">
+      <main class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+        <ServiceCard
+          title="Aplicaciones Web"
+          description="Aplicaciones web robustas y escalables, con tecnologías modernas para negocios en crecimiento."
+          IconComponent={HiOutlineCodeBracketSquare}
+          bgColorClass="bg-cyan-100"
+        />
+
+        <ServiceCard
+          title="Diseño de Sitios Web"
+          description="Diseños web atractivos y funcionales, centrados en la experiencia del usuario y la identidad de marca."
+          IconComponent={IoLogoWebComponent}
+          bgColorClass="bg-indigo-100"
+        />
+
+        <ServiceCard
+          title="Plataformas e-Commerce"
+          description="Soluciones e-commerce personalizadas para una experiencia de compra óptima y segura."
+          IconComponent={HiOutlineBuildingStorefront}
+          bgColorClass="bg-purple-100"
+        />
+        <ServiceCard
+          title="Mantenimiento Web"
+          description="Servicios continuos para asegurar el funcionamiento óptimo de tu sitio, incluyendo actualizaciones y respaldos."
+          IconComponent={HiOutlineLightBulb}
+          bgColorClass="bg-blue-100"
+        />
+
+        <ServiceCard
+          title="Optimización de Rendimiento"
+          description="Mejora la velocidad y eficiencia de tu sitio web para una mejor experiencia de usuario y clasificación SEO."
+          IconComponent={HiOutlineBolt}
+          bgColorClass="bg-yellow-100"
+        />
+
+        <ServiceCard
+          title="SEO y Analítica Web"
+          description="Estrategias avanzadas de SEO para mejorar tu visibilidad en línea y análisis detallado del tráfico web."
+          IconComponent={HiOutlineChartBar}
+          bgColorClass="bg-green-100"
+        />
+      </main>
+    </article>
+  </section>
+</Layout>
