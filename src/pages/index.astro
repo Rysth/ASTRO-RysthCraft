@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AboutSection from "../pages/sections/index/AboutSection.astro";
-import HeroSection from "../pages/sections/index/HeroSection.astro";
-import ServiceSection from "../pages/sections/index/ServiceSection.astro";
 import FeatureSection from "../pages/sections/index/FeatureSection.astro";
+import HeroSection from "../pages/sections/index/HeroSection.astro";
 import ProjectSection from "../pages/sections/index/ProjectSection.astro";
+import ServiceSection from "../pages/sections/index/ServiceSection.astro";
+import TechnologySection from "../pages/sections/index/TechnologySection.astro";
 ---
 
 <Layout
@@ -15,5 +16,6 @@ import ProjectSection from "../pages/sections/index/ProjectSection.astro";
   <AboutSection />
   <FeatureSection />
   <ProjectSection />
-  <hr class="border-none mt-60 bg-none" />
+  <hr class="hidden border-none md:block md:mt-56 bg-none" />
+  <TechnologySection />
 </Layout>

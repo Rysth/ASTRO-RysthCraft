@@ -1,0 +1,24 @@
+---
+import TechnologyCard from "@/components/ui/TechnologyCard.astro";
+import HTMLImage from "@/assets/images/technologies/html.svg";
+import CSSImage from "@/assets/images/technologies/css.svg";
+import JavaScriptImage from "@/assets/images/technologies/javascript.svg";
+import AstroImage from "@/assets/images/technologies/astro.svg";
+import ReactImage from "@/assets/images/technologies/react.svg";
+import RailsImage from "@/assets/images/technologies/rails.svg";
+import WordpressImage from "@/assets/images/technologies/wordpress.svg";
+---
+
+<section class="p-2">
+  <article class="max-w-screen-xl py-12 mx-auto">
+    <main class="flex flex-wrap justify-center gap-4 md:gap-8">
+      <TechnologyCard src={HTMLImage} alt="HTML Logo" />
+      <TechnologyCard src={CSSImage} alt="CSS Logo" />
+      <TechnologyCard src={JavaScriptImage} alt="JavaScript Logo" />
+      <TechnologyCard src={AstroImage} alt="Astro Logo" />
+      <TechnologyCard src={ReactImage} alt="React Logo" />
+      <TechnologyCard src={RailsImage} alt="Rails Logo" />
+      <TechnologyCard src={WordpressImage} alt="WordPress Logo" />
+    </main>
+  </article>
+</section>
