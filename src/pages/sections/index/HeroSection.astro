@@ -1,13 +1,17 @@
 ---
 import { Image } from "astro:assets";
 import * as FaIcons from "react-icons/fa";
-import WaveSVG from "../../../assets/background/wave.png";
+import WaveSVG from "../../../assets/background/wave.webp";
 import ResponsiveIllustration from "../../../assets/images/illustrations/responsive.svg";
 const { FaArrowRight } = FaIcons;
 ---
 
 <section class="h-full p-4 lg:h-max">
-  <Image src={WaveSVG} alt="" class="absolute top-0 left-0 w-full md:w-4/5" />
+  <Image
+    src={WaveSVG}
+    alt="Wave Background"
+    class="absolute top-0 left-0 w-full md:w-4/5"
+  />
   <article
     class="relative z-20 max-w-screen-xl gap-20 py-12 mx-auto space-y-10 h-max lg:py-32 md:py-24 lg:grid lg:grid-cols-2"
   >
