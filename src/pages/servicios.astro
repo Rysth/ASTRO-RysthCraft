@@ -1,6 +1,5 @@
 ---
 import ServiceCard from "@/components/ui/ServiceCard.astro";
-import Layout from "../layouts/Layout.astro";
 import {
   HiOutlineBolt,
   HiOutlineBuildingStorefront,
@@ -9,6 +8,8 @@ import {
   HiOutlineLightBulb,
 } from "react-icons/hi2";
 import { IoLogoWebComponent } from "react-icons/io5";
+import Layout from "../layouts/Layout.astro";
+import StatSection from "./sections/general/StatSection.astro";
 ---
 
 <Layout
@@ -25,9 +26,9 @@ import { IoLogoWebComponent } from "react-icons/io5";
       </ul>
     </div>
   </header>
-  <section>
+  <section class="p-4">
     <article class="max-w-screen-xl py-12 mx-auto md:py-24">
-      <main class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+      <main class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
         <ServiceCard
           title="Aplicaciones Web"
           description="Aplicaciones web robustas y escalables, con tecnologías modernas para negocios en crecimiento."
@@ -71,4 +72,5 @@ import { IoLogoWebComponent } from "react-icons/io5";
       </main>
     </article>
   </section>
+  <StatSection />
 </Layout>
