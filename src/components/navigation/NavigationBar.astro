@@ -5,8 +5,8 @@ import * as ReactIcons from "react-icons/fa";
 const { FaWhatsapp } = ReactIcons;
 ---
 
-<nav class="sticky top-0 z-50 transition duration-300 md:py-2" id="navbar">
-  <div class="max-w-screen-xl mx-auto navbar">
+<nav class="sticky top-0 z-50 px-4 transition duration-300 md:py-2" id="navbar">
+  <div class="max-w-screen-xl p-0 mx-auto navbar">
     <div class="navbar-start">
       <div class="dropdown">
         <button
@@ -38,7 +38,7 @@ const { FaWhatsapp } = ReactIcons;
         </ul>
       </div>
       <a class="text-xl" href="/">
-        <Image src={BrandImage} alt="RysthDesign Logo" class="w-20 lg:w-32" />
+        <Image src={BrandImage} alt="RysthDesign Logo" class="w-20 lg:w-28" />
       </a>
     </div>
     <div class="hidden text-white navbar-center lg:flex">
@@ -76,10 +76,10 @@ const { FaWhatsapp } = ReactIcons;
 
     const scrollTop = window.scrollY;
     if (scrollTop >= 200) {
-      navBarElement.classList.add("bg-brand-blue", "shadow");
+      navBarElement.classList.add("bg-brand-blue", "shadow-md");
       navBarElement.classList.remove("bg-transparent");
     } else {
-      navBarElement.classList.remove("bg-brand-blue", "shadow");
+      navBarElement.classList.remove("bg-brand-blue", "shadow-md");
       navBarElement.classList.add("bg-transparent");
     }
   }
