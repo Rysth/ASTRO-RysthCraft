@@ -1,5 +1,94 @@
 ---
-
+import { Image } from "astro:assets";
+import * as FaIcons from "react-icons/fa6";
+import * as TiIcons from "react-icons/ti";
+import BrandImage from "../../assets/images/brand/brand.svg";
+const { FaInstagram, FaFacebook, FaWhatsapp } = FaIcons;
 ---
 
-<footer></footer>
+<footer class="p-4 bg-white">
+  <div class="max-w-xl py-12 mx-auto">
+    <header class="flex flex-col items-center justify-center">
+      <a
+        class="grid w-40 h-24 p-4 text-xl border-transparent place-items-center btn btn-neutral bg-brand-blue"
+        href="/"
+      >
+        <Image src={BrandImage} alt="RysthDesign Logo" class="w-full h-full" />
+      </a>
+    </header>
+
+    <p
+      class="max-w-md mx-auto mt-6 text-sm leading-relaxed text-center text-gray-500"
+    >
+      Diseño y Desarrollo de Sitios Web Profesionales | Aplicaciones Web |
+      Tíendas en Línea | Páginas Web
+    </p>
+
+    <ul
+      class="flex flex-wrap justify-center gap-4 mt-6 text-sm md:gap-8 lg:gap-12"
+    >
+      <li>
+        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+          Inicio
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="text-gray-700 transition hover:text-gray-700/75"
+          href="/servicios"
+        >
+          Servicios
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="text-gray-700 transition hover:text-gray-700/75"
+          href="/portfolio"
+        >
+          Portfolio
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="text-gray-700 transition hover:text-gray-700/75"
+          href="/contactos"
+        >
+          Contactos
+        </a>
+      </li>
+    </ul>
+
+    <ul class="flex justify-center gap-6 mt-6 md:gap-8">
+      <li>
+        <a
+          href="https://www.instagram.com/rysthdesign/"
+          class="flex items-center gap-1 text-sm text-gray-700 transition duration-200 hover:text-indigo-900"
+        >
+          <FaInstagram className="text-xl" />
+          <span class="sr-only">Instagram</span></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/rysthdesign"
+          class="flex items-center gap-1 text-sm text-gray-700 transition duration-200 hover:text-indigo-900"
+        >
+          <FaFacebook className="text-xl" />
+          <span class="sr-only">Facebook</span></a
+        >
+      </li>
+      <li>
+        <a
+          href="http://tinyurl.com/contact-ws"
+          class="flex items-center gap-1 text-sm text-gray-700 transition duration-200 hover:text-indigo-900"
+        >
+          <FaWhatsapp className="text-xl" />
+          <span class="sr-only">Whatsapp</span></a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
