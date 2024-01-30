@@ -1,8 +1,10 @@
 ---
+import WavePNG from "@/assets/background/lower_wave.webp";
 import WebsiteIllustration from "@/assets/images/illustrations/website.svg";
+import Subtitle from "@/components/heading/Subtitle.astro";
+import PricingCard from "@/components/ui/PricingCard.astro";
 import ServiceCard from "@/components/ui/ServiceCard.astro";
 import { Image } from "astro:assets";
-import { GoCheckCircleFill } from "react-icons/go";
 import { FaArrowRight } from "react-icons/fa";
 import {
   HiOutlineBolt,
@@ -14,14 +16,12 @@ import {
 import { IoLogoWebComponent } from "react-icons/io5";
 import Layout from "../layouts/Layout.astro";
 import StatSection from "./sections/general/StatSection.astro";
-import WavePNG from "@/assets/background/lower_wave.png";
-import Subtitle from "@/components/heading/Subtitle.astro";
-import PricingCard from "@/components/ui/PricingCard.astro";
 ---
 
 <Layout
   title="RysthDesign | Servicios en Diseño y Desarrollo Web Profesionales"
 >
+  <!-- BreadCrumbSection -->
   <header
     class="py-12 pt-24 text-center text-white bg-gradient-to-t bg-brand-gradient md:pb-24 md:pt-36"
   >
@@ -33,6 +33,7 @@ import PricingCard from "@/components/ui/PricingCard.astro";
       </ul>
     </div>
   </header>
+  <!-- ServiceSection -->
   <section class="p-4">
     <article class="max-w-screen-xl py-12 mx-auto md:py-24">
       <main class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
@@ -79,7 +80,9 @@ import PricingCard from "@/components/ui/PricingCard.astro";
       </main>
     </article>
   </section>
+  <!-- StatSection -->
   <StatSection />
+  <!-- HeroSection -->
   <section class="p-4">
     <article
       class="grid max-w-screen-xl gap-20 py-12 mx-auto md:grid-cols-2 md:py-24 lg:pt-32"
@@ -119,6 +122,7 @@ import PricingCard from "@/components/ui/PricingCard.astro";
       />
     </article>
   </section>
+  <!-- PricingSection -->
   <section class="relative p-4">
     <Image
       src={WavePNG}
