@@ -1,0 +1,135 @@
+---
+import { FaEnvelope, FaPhone } from "react-icons/fa6";
+import Layout from "../layouts/Layout.astro";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+---
+
+<Layout
+  title="RysthDesign | Contáctanos | Diseño y Desarrollo Web Profesionales"
+>
+  <!-- BreadCrumbSection -->
+  <header
+    class="py-12 pt-24 text-center text-white bg-gradient-to-t bg-brand-gradient md:pb-24 md:pt-36"
+  >
+    <h2 class="text-3xl font-bold">Contactos</h2>
+    <div class="flex justify-center text-sm breadcrumbs">
+      <ul class="text-white/80">
+        <li><a href="/">Inicio</a></li>
+        <li>Contactos</li>
+      </ul>
+    </div>
+  </header>
+  <section class="p-4">
+    <article class="max-w-screen-xl py-12 mx-auto md:py-24">
+      <main class="grid md:grid-cols-[30%_1fr] gap-8 md:gap-16">
+        <aside class="text-center md:text-left">
+          <h3 class="text-2xl font-bold">¿Listo para Empezar?</h3>
+          <p class="mt-4 text-sm">
+            Utiliza nuestros medios de comunicación, para consultar acerca de
+            nuestros servicios en mayor detalle.
+          </p>
+          <ul class="grid justify-center gap-6 mt-6 md:justify-start">
+            <li class="flex items-center gap-4">
+              <FaEnvelope className="text-4xl" />
+              <div class="text-sm">
+                <h4 class="text-base font-semibold">Correo Electrónico</h4>
+                <a
+                  href="mailto:johnpalacios.t@gmail.com"
+                  class="link link-neutral">johnpalacios.t@gmail.com</a
+                >
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <FaPhone className="text-4xl" />
+              <div class="text-sm">
+                <h4 class="text-base font-semibold">Número de Télefono</h4>
+                <a href="tel:+593988949117" class="link link-neutral"
+                  >+593 98 894 9117</a
+                >
+              </div>
+            </li>
+            <li class="grid gap-4 text-sm flex-">
+              <h4 class="text-base font-semibold">Síguenos</h4>
+              <div
+                class="flex items-center justify-center gap-4 md:justify-start"
+              >
+                <a
+                  href="https://www.facebook.com/rysthdesign"
+                  class="link link-neutral"
+                  ><FaFacebook className="text-2xl" /></a
+                >
+                <a
+                  href="https://www.instagram.com/rysthdesign/"
+                  class="link link-neutral"
+                  ><FaInstagram className="text-2xl" /></a
+                >
+                <a
+                  href="http://tinyurl.com/contact-ws"
+                  class="link link-neutral"
+                  ><FaWhatsapp className="text-2xl" /></a
+                >
+              </div>
+            </li>
+          </ul>
+        </aside>
+        <form name="Contactos" class="grid gap-2" netlify>
+          <fieldset class="grid gap-4 md:grid-cols-2 md:gap-8">
+            <label class="w-full form-control">
+              <div class="label">
+                <span class="font-semibold label-text">Nombres</span>
+              </div>
+              <input
+                type="text"
+                name="Nombres"
+                class="w-full text-sm input input-bordered"
+                required
+              />
+            </label>
+            <label class="w-full form-control">
+              <div class="label">
+                <span class="font-semibold label-text">Correo Electrónico</span>
+              </div>
+              <input
+                type="email"
+                name="Email"
+                class="w-full text-sm input input-bordered"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset class="grid gap-4">
+            <label class="w-full form-control">
+              <div class="label">
+                <span class="font-semibold label-text">Asunto</span>
+              </div>
+              <input
+                type="text"
+                name="Asunto"
+                class="w-full text-sm input input-bordered"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset class="grid gap-4">
+            <label class="w-full form-control">
+              <div class="label">
+                <span class="font-semibold label-text">Mensaje</span>
+              </div>
+              <textarea
+                name="Mensaje"
+                required
+                class="h-40 resize-none textarea textarea-bordered"></textarea>
+            </label>
+          </fieldset>
+          <fieldset>
+            <button
+              type="submit"
+              class="w-32 mt-4 text-white border-transparent btn btn-neutral bg-brand-blue"
+              >Envíar</button
+            >
+          </fieldset>
+        </form>
+      </main>
+    </article>
+  </section>
+</Layout>
