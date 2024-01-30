@@ -2,7 +2,8 @@
 import WebsiteIllustration from "@/assets/images/illustrations/website.svg";
 import ServiceCard from "@/components/ui/ServiceCard.astro";
 import { Image } from "astro:assets";
-import { FaArrowRight } from "react-icons/fa6";
+import { GoCheckCircleFill } from "react-icons/go";
+import { FaArrowRight } from "react-icons/fa";
 import {
   HiOutlineBolt,
   HiOutlineBuildingStorefront,
@@ -13,6 +14,9 @@ import {
 import { IoLogoWebComponent } from "react-icons/io5";
 import Layout from "../layouts/Layout.astro";
 import StatSection from "./sections/general/StatSection.astro";
+import WavePNG from "@/assets/background/lower_wave.png";
+import Subtitle from "@/components/heading/Subtitle.astro";
+import PricingCard from "@/components/ui/PricingCard.astro";
 ---
 
 <Layout
@@ -78,7 +82,7 @@ import StatSection from "./sections/general/StatSection.astro";
   <StatSection />
   <section class="p-4">
     <article
-      class="grid max-w-screen-xl gap-20 py-12 mx-auto md:grid-cols-2 md:py-24 lg:py-32"
+      class="grid max-w-screen-xl gap-20 py-12 mx-auto md:grid-cols-2 md:py-24 lg:pt-32"
     >
       <main
         class="relative z-20 flex flex-col items-center justify-center md:items-start gap-7 md:gap-10"
@@ -114,5 +118,76 @@ import StatSection from "./sections/general/StatSection.astro";
         class="w-full lg:h-full"
       />
     </article>
+  </section>
+  <section class="relative p-4">
+    <Image
+      src={WavePNG}
+      alt="Wave Background"
+      class="absolute bottom-0 left-0 right-0 w-full max-h-96 brightness-75"
+    />
+    <div class="max-w-screen-xl py-12 mx-auto space-y-12 md:py-14">
+      <Subtitle
+        title="Consulta Nuestros Planes"
+        description="Ofrecemos soluciones a medida para tu presencia digital, con opciones desde sitios informativos hasta aplicaciones web avanzadas."
+      />
+      <div
+        class="relative flex flex-col items-center justify-center space-x-4 space-y-12 md:flex-row lg:space-y-0"
+      >
+        {/* Plan Informativo */}
+        <PricingCard
+          title="Plan Informativo"
+          price="$250"
+          features={[
+            "Sitio Web Informativo",
+            "Formulario de Contacto",
+            "Botón de WhatsApp",
+            "4 Secciones",
+            "Diseño Web Profesional",
+            "Certificación SSL",
+            "Dominio Gratuito",
+            "Optimizado para Móviles",
+          ]}
+          maintanceText="Mantenimiento y Optimización $15/mes"
+          buttonText="Comenzar Ahora"
+          highlight={false}
+        />
+        {/* Plan E-Commerce */}
+        <PricingCard
+          title="Plan E-Commerce"
+          price="$500"
+          features={[
+            "Gestor de Contenido",
+            "Tienda en Línea",
+            "Botón de Pago",
+            "Hasta 100 Productos",
+            "Diseño Web Profesional",
+            "Certificación SSL",
+            "Dominio Gratuito",
+            "Optimizado para Móviles",
+          ]}
+          buttonText="Comenzar Ahora"
+          maintanceText="Mantenimiento y Optimización $100/mes"
+          highlight={true}
+        />
+        {/* Plan Aplicación Web */}
+        <PricingCard
+          title="Plan Aplicación Web"
+          price="$700"
+          features={[
+            "Aplicación Web Moderna",
+            "Base de Datos Segura",
+            "Interfaz Personalizada",
+            "Correo Profesional",
+            "Diseño Web Profesional",
+            "Certificación SSL",
+            "Dominio Gratuito",
+            "Optimizado para Móviles",
+          ]}
+          buttonText="Comenzar Ahora"
+          maintanceText="Mantenimiento y Optimización $125/mes"
+          highlight={false}
+        />
+      </div>
+    </div>
   </section>
 </Layout>
