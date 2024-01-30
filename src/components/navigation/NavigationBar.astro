@@ -1,22 +1,21 @@
 ---
 import BrandImage from "../../assets/images/brand/brand.svg";
 import { Image } from "astro:assets";
-import * as ReactIcons from "react-icons/fa";
-const { FaWhatsapp } = ReactIcons;
+import { FaWhatsapp, FaHome, FaPencilAlt, FaPhoneAlt } from "react-icons/fa";
 ---
 
 <nav
   class="fixed top-0 z-50 w-full px-4 transition duration-300 md:py-3 bg-brand-blue"
   id="navbar"
 >
-  <div class="max-w-screen-xl p-0 mx-auto navbar">
+  <div class="relative max-w-screen-xl p-0 mx-auto navbar">
     <div class="navbar-start">
-      <div class="dropdown">
+      <div class="">
         <button
-          tabindex="0"
-          role="button"
+          type="button"
           class="text-white btn btn-ghost lg:hidden ps-0"
           aria-label="Toggle button menu"
+          id="toggleButton"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,13 +31,28 @@ const { FaWhatsapp } = ReactIcons;
           >
         </button>
         <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          class="hidden absolute left-0 right-0 top-4/4 lg:hidden my-4 z-[1] p-4 shadow-xl bg-base-100 rounded-xl space-y-4 min-w-full transition"
+          id="mobileMenu"
         >
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/servicios">Servicios</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/contactos">Contactos</a></li>
+          <li>
+            <a class="flex items-center gap-2 text-sm" href="/">
+              <FaHome className="text-lg text-brand-blue" />
+              Inicio</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-2 text-sm" href="/servicios">
+              <FaPencilAlt className="text-lg text-brand-blue" />
+              Servicios</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-2 text-sm" href=" contactos">
+              <FaPhoneAlt className="text-lg text-brand-blue" />
+
+              Contactos</a
+            >
+          </li>
         </ul>
       </div>
       <a class="text-xl" href="/">
@@ -49,7 +63,6 @@ const { FaWhatsapp } = ReactIcons;
       <ul class="gap-2 px-1 menu menu-horizontal">
         <li><a href="/">Inicio</a></li>
         <li><a href="/servicios">Servicios</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
         <li><a href="/contactos">Contactos</a></li>
       </ul>
     </div>
@@ -85,4 +98,11 @@ const { FaWhatsapp } = ReactIcons;
 
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("resize", handleScroll); // Asegúrate de que el estilo se actualice al redimensionar
+
+  const toggleButton = document.querySelector("#toggleButton");
+  const mobileMenu = document.querySelector("#mobileMenu");
+
+  toggleButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
 </script>
