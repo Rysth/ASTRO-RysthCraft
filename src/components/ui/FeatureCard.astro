@@ -34,21 +34,21 @@ function getColorStyle(color) {
 }
 ---
 
-<div class="flex flex-col items-center justify-center p-4 shadow-center h-80">
+<div class="flex flex-col items-center justify-center shadow-center">
   <header
-    class={`relative p-8 mb-6 transition duration-300 shadow hover:shadow-xl rounded-full group ${
+    class={`relative p-4 md:p-8 mb-3 md:mb-6 transition duration-300 shadow hover:shadow-xl rounded-full group ${
       getColorStyle(bgColor).hoverShadowColor
     }`}
   >
     <IconComponent
-      className={`h-28 w-28 relative z-20 transition duration-300 ${
+      className={`md:h-28 md:w-28 h-20 w-20 relative z-20 transition duration-300 ${
         getColorStyle(bgColor).textColor
       }`}
     />
   </header>
-  <div class="h-20 space-y-4 text-center">
-    <h3 class="text-xl font-semibold">{title}</h3>
-    <p class="max-w-xs text-sm leading-6 text-gray-500">
+  <div class="space-y-2 text-center md:space-y-4">
+    <h3 class="font-semibold md:text-xl">{title}</h3>
+    <p class="max-w-xs text-xs leading-6 text-gray-500 md:text-sm">
       {description}
     </p>
   </div>
