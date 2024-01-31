@@ -33,6 +33,49 @@ import StatSection from "../sections/general/StatSection.astro";
       </ul>
     </div>
   </header>
+  <!-- HeroSection -->
+  <section class="p-4">
+    <article
+      class="grid max-w-screen-xl gap-20 py-12 mx-auto md:grid-cols-2 md:pt-24 lg:pt-32"
+    >
+      <main
+        class="relative z-20 flex flex-col items-center justify-center md:items-start gap-7 md:gap-10"
+      >
+        <h3 class="font-semibold text-brand-blue">Nuestros Servicios</h3>
+        <div class="space-y-2 text-center md:space-y-4 md:text-left">
+          <h2 class="text-2xl font-bold md:text-4xl lg:!leading-10 lg:max-w-lg">
+            Soluciones Integrales en <spa class="text-brand-blue"
+              >Diseño y Desarrollo Web</spa
+            >
+          </h2>
+          <p
+            class="max-w-lg mx-auto text-sm !leading-7 text-gray-500 md:text-base lg:ml-0"
+          >
+            Transformamos tu visión en realidad digital. Desde el diseño web
+            hasta el desarrollo de aplicaciones robustas, nuestro enfoque
+            personalizado garantiza soluciones que se alinean perfectamente con
+            tus objetivos de negocio.
+          </p>
+        </div>
+        <a
+          href="http://tinyurl.com/contact-ws"
+          target="_blank"
+          rel="noreferrer"
+          class="text-white border-transparent btn btn-neutral bg-brand-blue max-w-max group"
+        >
+          Contactános <FaArrowRight
+            className="block text-xl group-hover:translate-x-1 transition"
+          />
+        </a>
+      </main>
+      <Image
+        src={WebsiteIllustration}
+        alt="Ilustración de servicios web"
+        class="w-full lg:h-full"
+      />
+    </article>
+  </section>
+
   <!-- ServiceSection -->
   <section class="p-4">
     <article class="max-w-screen-xl py-12 mx-auto md:py-24">
@@ -82,46 +125,7 @@ import StatSection from "../sections/general/StatSection.astro";
   </section>
   <!-- StatSection -->
   <StatSection />
-  <!-- HeroSection -->
-  <section class="p-4">
-    <article
-      class="grid max-w-screen-xl gap-20 py-12 mx-auto md:grid-cols-2 md:py-24 lg:pt-32"
-    >
-      <main
-        class="relative z-20 flex flex-col items-center justify-center md:items-start gap-7 md:gap-10"
-      >
-        <h3 class="font-semibold text-brand-blue">Nuestros Servicios</h3>
-        <div class="space-y-2 text-center md:space-y-4 md:text-left">
-          <h2 class="text-2xl font-bold md:text-4xl lg:!leading-10 lg:max-w-lg">
-            Soluciones Integrales en Diseño y Desarrollo Web
-          </h2>
-          <p
-            class="max-w-lg mx-auto text-sm !leading-7 text-gray-500 md:text-base lg:ml-0"
-          >
-            Transformamos tu visión en realidad digital. Desde el diseño web
-            hasta el desarrollo de aplicaciones robustas, nuestro enfoque
-            personalizado garantiza soluciones que se alinean perfectamente con
-            tus objetivos de negocio.
-          </p>
-        </div>
-        <a
-          href="http://tinyurl.com/contact-ws"
-          target="_blank"
-          rel="noreferrer"
-          class="text-white border-transparent btn btn-neutral bg-brand-blue max-w-max group"
-        >
-          Contactános <FaArrowRight
-            className="block text-xl group-hover:translate-x-1 transition"
-          />
-        </a>
-      </main>
-      <Image
-        src={WebsiteIllustration}
-        alt="Ilustración de servicios web"
-        class="w-full lg:h-full"
-      />
-    </article>
-  </section>
+
   <!-- PricingSection -->
   <section class="relative p-4">
     <Image
