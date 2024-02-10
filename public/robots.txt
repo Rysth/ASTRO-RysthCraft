@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rysthdesign.com/sitemap-index.xml
