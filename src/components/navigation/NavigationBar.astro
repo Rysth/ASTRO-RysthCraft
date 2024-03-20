@@ -1,18 +1,12 @@
 ---
 import BrandImage from "../../assets/images/brand/brand_dark.svg";
 import { Image } from "astro:assets";
-import {
-  FaWhatsapp,
-  FaHome,
-  FaPencilAlt,
-  FaPhoneAlt,
-  FaBars,
-} from "react-icons/fa";
+import { FaWhatsapp, FaHome, FaPencilAlt, FaPhoneAlt } from "react-icons/fa";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 ---
 
 <nav
-  class="fixed top-0 z-50 w-full px-4 py-6 transition duration-300 bg-white"
+  class="fixed top-0 z-50 w-full px-4 py-6 transition duration-300 bg-white shadow shadow-black/5"
   id="navbar"
 >
   <div class="relative max-w-screen-xl p-0 mx-auto navbar">
@@ -20,7 +14,7 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
       <div class="">
         <button
           type="button"
-          class="btn btn-ghost lg:hidden ps-0 pe-2"
+          class="btn btn-ghost lg:hidden ps-2 pe-2"
           aria-label="Toggle button menu"
           id="toggleButton"
         >
@@ -43,9 +37,9 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
             >
           </li>
           <li>
-            <a class="flex items-center gap-2 text-sm" href="/servicios">
+            <a class="flex items-center gap-2 text-sm" href="/planes">
               <FaPencilAlt className="text-lg text-brand-blue" />
-              Precios</a
+              Planes</a
             >
           </li>
           <li>
@@ -68,7 +62,7 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
           <a href="/servicios">Servicios</a>
         </li>
         <li>
-          <a href="/servicios">Precios</a>
+          <a href="/planes">Planes</a>
         </li>
         <li><a href="/contactos">Contactos</a></li>
       </ul>
